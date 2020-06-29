@@ -1,0 +1,42 @@
+@import '~styles/settings/variables';
+
+.section-head {
+  $root: &;
+
+  position: relative;
+  // background-size: cover;
+  // background-position: center center;
+
+  // @include darkOverlay;
+
+  &__questions {
+    padding: 25px;
+    background-color: $c-heavy-yellow;
+    color: $c-white;
+    border-radius: 0;
+  }
+
+  &__icon {
+    fill: $c-white;
+  }
+
+  &__separator {
+    height: 1px;
+    width: 60px;
+    background: $c-white;
+  }
+
+  &__subtitle {
+    max-width: 190px;
+  }
+
+  &__updates {
+    position: absolute !important;
+    bottom: 40px;
+    left: 0;
+    transform: translateY(100%);
+    right: 0;
+    margin: auto;
+    width: calc(100% - 30px);
+  }
+}

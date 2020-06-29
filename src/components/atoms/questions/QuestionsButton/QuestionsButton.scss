@@ -1,0 +1,51 @@
+@import '~styles/settings/variables';
+
+.questions-button {
+  $root: &;
+
+  display: inline-flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 10px 15px;
+  outline: none;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  border: none;
+  background: $c-white;
+  text-align: center;
+
+  &__icon {
+    fill: $c-q-black;
+  }
+
+  &--small {
+    padding: 7px 10px;
+  }
+
+  &--black-yellow {
+    background: $c-black;
+    color: $c-q-yellow;
+  }
+
+  &--tertiary {
+    background: $c-q-1;
+    color: $c-white;
+
+    #{$root}__icon {
+      fill: $c-white;
+    }
+  }
+
+  &--secondary {
+    background: rgba($c-white, 0.5);
+
+    &#{$root}--small {
+      #{$root}__icon {
+        fill: $c-white;
+      }
+    }
+  }
+}

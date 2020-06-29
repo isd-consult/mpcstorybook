@@ -1,0 +1,98 @@
+@import '~styles/settings/variables';
+
+.snackbar-new {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $c-black;
+  color: $c-white;
+  transition: transform $t-normal, background $t-normal;
+  text-align: center;
+  z-index: $z-high;
+
+  @include media('<medium') {
+    padding: 10px 15px;
+  }
+
+  &__icon {
+    fill: $c-white;
+    margin-right: 10px;
+    min-width: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    cursor: pointer;
+    display: inline-flex;
+    top: 50%;
+    right: 0;
+    padding: 16px;
+    transform: translateY(-50%);
+
+    &-icon {
+      fill: $c-white;
+      width: 13px;
+      height: 13px;
+      transition: $t-normal;
+    }
+
+    &:hover {
+      .snackbar__close-icon {
+        fill: $c-white;
+      }
+    }
+  }
+
+  //------------------------------
+  // => Modifiers
+  //------------------------------
+  &--with-control {
+    @include media('<medium') {
+      padding: 10px 50px 10px 15px;
+    }
+  }
+
+  &--bottom {
+    transform: translateY(100%);
+    top: auto;
+    bottom: 0;
+
+    .is-app & {
+      bottom: 50px;
+    }
+  }
+
+  &--relative {
+    position: relative;
+    display: none;
+    transform: none;
+  }
+
+  &--opened {
+    display: flex;
+    transform: translateY(0%);
+  }
+
+  // Colors / Category
+  &--success {
+    background: $c-success;
+  }
+
+  &--warning {
+    background: $c-warn;
+  }
+
+  &--danger {
+    background: $c-danger;
+  }
+
+  &--info {
+    background: $c-info;
+  }
+}

@@ -1,0 +1,39 @@
+@import '~styles/settings/variables';
+
+.card-option {
+  $root: &;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  width: auto;
+  padding: 7px 15px;
+  min-height: 36px;
+
+  &__closebtn {
+    padding-top: 3px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+  }
+
+  &--close {
+    padding-right: 5px;
+  }
+
+  &--grey {
+    box-shadow: none;
+    background-color: $c-wildsand;
+
+    #{$root}__text {
+      font-family: $f-sf-bold;
+      padding: 7px 17px;
+    }
+
+    #{$root}__closebtn {
+      padding-top: 0;
+    }
+  }
+}

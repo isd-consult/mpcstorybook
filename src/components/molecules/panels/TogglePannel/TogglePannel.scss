@@ -1,0 +1,106 @@
+@import '~styles/settings/variables';
+
+.toggle-pannel {
+  $root: &;
+
+  position: relative;
+  user-select: none;
+
+  &__header {
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &--show {
+    #{$root}__content {
+      display: block;
+    }
+  }
+
+  //--------------
+  // modifier according to mode option
+  //--------------
+  &--filter {
+    overflow: auto;
+
+    #{$root}__header {
+      display: flex;
+      border-top: 1px solid $c-silver-chalice;
+    }
+
+    #{$root}__title {
+      font-size: 16px;
+      font-family: $f-sf-bold;
+      color: black;
+      padding: 20px 20px 20px 30px;
+    }
+
+    #{$root}__subtitle {
+      margin-top: 25px;
+      color: $c-silver-chalice;
+    }
+
+    #{$root}__icon {
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-right: 20px;
+    }
+
+    #{$root}__content {
+      padding: 0 10px 0 30px;
+      color: black;
+    }
+  }
+
+  &--availitem {
+    overflow: auto;
+
+    #{$root}__header {
+      font-size: 14px;
+      color: black;
+      border-bottom: 1px solid $c-wildsand;
+      padding: 20px 0;
+    }
+
+    #{$root}__icon {
+      width: 10px;
+      height: 10px;
+      margin: 0 10px;
+      display: inline-block;
+    }
+  }
+
+  &--questions {
+    overflow: auto;
+
+    #{$root}__header {
+      font-size: 18px;
+      font-weight: 3px;
+      color: black;
+      padding: 20px 0;
+    }
+
+    #{$root}__icon {
+      margin-left: 10px;
+      margin-bottom: 1px;
+      display: inline-block;
+    }
+  }
+
+  &--footer {
+    #{$root}__header {
+      padding: 15px;
+    }
+
+    #{$root}__icon {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+    }
+  }
+}

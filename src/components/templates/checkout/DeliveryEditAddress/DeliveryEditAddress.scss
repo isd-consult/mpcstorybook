@@ -1,0 +1,9 @@
+@import '~styles/settings/variables';
+
+.delivery-edit-address {
+  $root: &;
+
+  position: relative;
+  padding: 7%;
+  padding-bottom: 0;
+}

@@ -1,0 +1,47 @@
+@import '../settings/variables';
+$mediaList: sm 'small', md 'medium', lg 'large', xl 'xlarge';
+
+// =======================================
+// Display
+// =======================================
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+// =======================================
+// Reponsive
+// =======================================
+@each $mq in $mediaList {
+  $key: nth($mq, 1);
+  $value: nth($mq, 2);
+
+  @include media('>=#{$value}') {
+    .d-flex-#{$key} {
+      display: flex;
+    }
+
+    .d-block-#{$key} {
+      display: block;
+    }
+
+    .d-none-#{$key} {
+      display: none;
+    }
+
+    .d-inline-flex-#{$key} {
+      display: inline-flex;
+    }
+  }
+}

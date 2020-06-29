@@ -1,0 +1,173 @@
+{
+  "name": "fixel",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aws-amplify/api": "^2.1.6",
+    "@aws-amplify/auth": "^2.1.6",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-info": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-notes": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "animejs": "^3.1.0",
+    "clsx": "^1.0.4",
+    "connected-react-router": "^6.6.0",
+    "formik": "^2.0.4",
+    "history": "^4.10.1",
+    "jsdom": "^15.1.1",
+    "md5": "^2.2.1",
+    "node-sass": "^4.12.0",
+    "nouislider": "^14.1.1",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.8.2",
+    "react": "^16.8.6",
+    "react-autocomplete": "^1.8.1",
+    "react-dom": "^16.8.6",
+    "react-ga": "^2.6.0",
+    "react-optimize": "^2.0.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-slick": "^0.25.2",
+    "react-transition-group": "^4.3.0",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1",
+    "storybook-react-router": "^1.0.8",
+    "uuid": "^3.3.3",
+    "yup": "^0.27.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.js",
+    "lint-scss": "npx stylelint src/**/*.scss",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "mkcp": "npx ./scripts/make-component.js",
+    "mkicons": "npx ./scripts/make-icons.js"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": false,
+      "codeFrame": false
+    },
+    "extends": [
+      "airbnb",
+      "prettier",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "moduleDirectory": [
+            "node_modules",
+            "src/"
+          ]
+        }
+      }
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "max-len": [
+        "error",
+        {
+          "code": 80
+        }
+      ],
+      "no-use-before-define": "off",
+      "no-plusplus": "off",
+      "react/forbid-prop-types": "off",
+      "class-methods-use-this": "off",
+      "import/prefer-default-export": "off",
+      "prefer-promise-reject-errors": [
+        "off"
+      ],
+      "react/prefer-stateless-function": [
+        "off"
+      ],
+      "react/jsx-filename-extension": [
+        "off"
+      ],
+      "react/prop-types": [
+        "warn"
+      ],
+      "no-return-assign": [
+        "off"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "at-rule-no-unknown": null,
+      "no-descending-specificity": null,
+      "color-hex-length": null,
+      "selector-pseudo-class-no-unknown": null,
+      "selector-type-no-unknown": null
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.1",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.9.2"
+  }
+}

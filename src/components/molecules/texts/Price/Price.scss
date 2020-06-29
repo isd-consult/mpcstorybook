@@ -1,0 +1,32 @@
+@import '~styles/settings/variables';
+
+.price {
+  $root: &;
+
+  position: relative;
+  display: flex;
+
+  &__value,
+  &__discount {
+    display: inline-block;
+  }
+
+  &__fbucks {
+    padding: 4px 5px;
+    background-color: $c-bright-chico;
+    color: $c-white;
+  }
+
+  &--center {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--vertical {
+    flex-direction: column;
+
+    #{$root}__fbucks {
+      margin-left: 0;
+    }
+  }
+}

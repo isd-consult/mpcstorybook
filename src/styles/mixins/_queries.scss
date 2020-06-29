@@ -1,0 +1,35 @@
+@mixin xxsmall {
+  @include media('>=xxsmall') {
+    @content;
+  }
+}
+
+@mixin xsmall {
+  @include media('>=xsmall') {
+    @content;
+  }
+}
+
+@mixin small {
+  @include media('>=small') {
+    @content;
+  }
+}
+
+@mixin medium {
+  @include media('>=medium') {
+    @content;
+  }
+}
+
+@mixin large {
+  @include media('>=large') {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @include media('>=xlarge') {
+    @content;
+  }
+}

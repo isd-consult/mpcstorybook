@@ -1,0 +1,35 @@
+@import '~styles/settings/variables';
+
+.questions-pagination {
+  $root: &;
+
+  position: relative;
+  height: 60px;
+  background: $c-q-black;
+  display: flex;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    overflow: auto;
+    width: calc(100% - 80px);
+    margin: auto;
+  }
+
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 0;
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+}

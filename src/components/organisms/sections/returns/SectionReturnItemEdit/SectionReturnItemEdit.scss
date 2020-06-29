@@ -1,0 +1,47 @@
+@import '~styles/settings/variables';
+
+.section-return-item-edit {
+  $root: &;
+
+  position: relative;
+
+  &__head {
+    display: flex;
+    padding: 15px 25px;
+    background-color: $c-wildsand;
+
+    &-product {
+      flex-basis: 90%;
+      color: $c-order-label;
+    }
+
+    &-qty {
+      flex-basis: 10%;
+      color: $c-order-label;
+    }
+  }
+
+  &__row {
+    display: flex;
+    padding: 10px;
+
+    &-image {
+      flex-basis: 20%;
+      width: 37px;
+    }
+
+    &-desc {
+      flex-basis: 67%;
+      padding: 10px 20px;
+    }
+
+    &-qty {
+      flex-basis: 15%;
+    }
+  }
+
+  &__comment {
+    height: 90px;
+    width: 100%;
+  }
+}

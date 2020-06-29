@@ -1,0 +1,11 @@
+@import '~styles/settings/variables';
+
+.product-list {
+  $root: &;
+
+  position: relative;
+
+  &__test {
+    transition: transform 1s ease-in-out;
+  }
+}

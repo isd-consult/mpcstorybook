@@ -1,0 +1,81 @@
+@import '~styles/settings/variables';
+
+.section-questions {
+  $root: &;
+
+  position: relative;
+
+  &__step {
+    width: calc(100% - 150px);
+    float: left;
+  }
+
+  &__couponBtn {
+    float: left;
+    width: 150px;
+    height: 38px;
+    padding: 13px 30px;
+    font-family: $f-se-ui;
+    border-radius: 50px 0 0 50px;
+    background-color: $c-coral-tree;
+  }
+
+  &__section {
+    height: calc(100vh - 308px);
+    overflow: auto;
+  }
+
+  &_question {
+    height: 120px;
+    background-color: $c-wildsand;
+  }
+
+  &__gender {
+    width: 90%;
+    margin-left: 10%;
+  }
+
+  &__brand {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  &__category {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  &__thanks {
+    background-color: $c-wildsand;
+    min-height: calc(100vh - 145px);
+  }
+
+  &__footer {
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $c-white;
+  }
+
+  &__nextBtn {
+    background-color: $c-black;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    fill: $c-white;
+    position: absolute;
+    right: 25px;
+    top: -30px;
+  }
+
+  &__nextIcon {
+    fill: $c-white;
+  }
+
+  &__footerdesc {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+}

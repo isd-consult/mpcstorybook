@@ -1,0 +1,8 @@
+@import '~styles/settings/variables';
+
+.validation-error {
+  $root: &;
+
+  position: relative;
+  color: $c-red;
+}

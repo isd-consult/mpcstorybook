@@ -1,0 +1,51 @@
+@import '~styles/settings/variables';
+
+.questions-home {
+  $root: &;
+
+  overflow: hidden;
+
+  &__background-wrapper {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__background {
+    width: 100%;
+    height: 480px;
+    fill: $c-q-yellow;
+  }
+
+  &__title {
+    line-height: 1em;
+  }
+
+  &__content {
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    bottom: 0;
+    padding-bottom: 40px;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__content-inner {
+    max-width: 400px;
+  }
+}
+
+.js-question-content-part {
+  opacity: 0;
+  transform: translateY(100px);
+}

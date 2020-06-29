@@ -1,0 +1,43 @@
+@import '~styles/settings/variables';
+
+.footer {
+  $root: &;
+
+  position: relative;
+  background: $c-wildsand;
+
+  &__email {
+    border: 1px solid $c-borderline;
+    padding: 15px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  &__followus {
+    border: 1px solid $c-borderline;
+    border-radius: 3px;
+
+    &-content {
+      max-width: 280px;
+      margin: auto;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    font-size: 9px;
+
+    &:first-child {
+      font-size: $f-size-xxs;
+    }
+  }
+}

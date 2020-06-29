@@ -1,0 +1,21 @@
+@import '~styles/settings/variables';
+
+.section-add-to-cart {
+  $root: &;
+
+  position: relative;
+
+  &__fitlink {
+    text-align: center;
+  }
+
+  &__validation {
+    border-radius: 3px;
+    background: $c-roman;
+    margin: 10px 10px 0 10px;
+    padding: 10px 20px;
+    justify-content: center;
+    display: flex;
+    color: $c-white;
+  }
+}

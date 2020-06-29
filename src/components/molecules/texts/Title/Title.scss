@@ -1,0 +1,13 @@
+@import '~styles/settings/variables';
+
+.title {
+  $root: &;
+
+  position: relative;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

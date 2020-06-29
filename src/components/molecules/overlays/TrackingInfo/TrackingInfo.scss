@@ -1,0 +1,27 @@
+@import '~styles/settings/variables';
+
+.tracking-info {
+  $root: &;
+
+  background: rgba($c-black, 0.8);
+  padding: 10px;
+  height: 100%;
+
+  &__bound {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $c-white;
+    height: 100%;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    height: 50%;
+
+    &:first-child {
+      border-bottom: 1px solid $c-white;
+    }
+  }
+}

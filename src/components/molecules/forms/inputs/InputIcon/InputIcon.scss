@@ -1,0 +1,69 @@
+@import '~styles/settings/variables';
+
+.input-icon {
+  $root: &;
+
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    z-index: $z-low;
+    margin-top: 10px;
+    margin-left: 10px;
+    fill: $c-silver-chalice;
+  }
+
+  &__meter {
+    width: 30%;
+  }
+
+  &__text {
+    width: 100%;
+    border-width: 0 0 1px;
+    border-radius: 0;
+    border-color: #d7d7d7;
+    height: 40px;
+    font-size: $f-size-s;
+    color: $c-tuna;
+
+    &:focus + {
+      #{$root}__underline {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__underline {
+    background: $c-tuna;
+    display: inline-block;
+    height: 1px;
+    position: absolute;
+    transform: scale(0);
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    width: 100%;
+    left: 0;
+    top: 39px;
+  }
+
+  &__forgot {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    color: $c-bright-chico;
+  }
+
+  &__error {
+    color: $c-danger;
+  }
+
+  &--error {
+    #{$root}__underline {
+      background: $c-danger;
+    }
+
+    #{$root}__text {
+      border-color: $c-danger;
+    }
+  }
+}

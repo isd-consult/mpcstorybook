@@ -1,0 +1,107 @@
+@import '~styles/settings/variables';
+
+.button-file {
+  $root: &;
+
+  &__label {
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    border: none;
+    padding: 0 15px;
+    border-radius: 20px;
+    color: $c-white;
+    text-decoration: none !important;
+    background-color: $c-black;
+    transition: background $t-normal;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+  }
+
+  &--row {
+    display: flex;
+    align-items: center;
+
+    #{$root}__label {
+      width: 55%;
+    }
+
+    #{$root}__text {
+      width: 45%;
+    }
+  }
+
+  &--col {
+    display: block;
+
+    #{$root}__label {
+      width: 100%;
+    }
+
+    #{$root}__text {
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+
+  &--disabled {
+    #{$root}__label {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &--women {
+    #{$root}__label {
+      background-color: $c-au-chico;
+
+      @include hover {
+        background-color: darken($c-au-chico, 5);
+      }
+    }
+  }
+
+  &--men {
+    #{$root}__label {
+      background-color: $c-deep-cerulean;
+
+      @include hover {
+        background-color: darken($c-deep-cerulean, 5);
+      }
+    }
+  }
+
+  &--tertiary {
+    #{$root}__label {
+      background: $c-white;
+      color: $c-black;
+
+      @include hover {
+        background-color: darken($c-white, 5);
+      }
+    }
+  }
+
+  &--grey {
+    #{$root}__label {
+      background: $c-wildsand;
+      color: $c-black;
+    }
+  }
+}

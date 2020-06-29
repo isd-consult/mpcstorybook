@@ -1,0 +1,44 @@
+@import '~styles/settings/variables';
+
+.main-banner {
+  $root: &;
+
+  position: relative;
+
+  &__item {
+    height: 360px;
+  }
+
+  &__line {
+    height: 1px;
+    width: 150px;
+    background: $c-white;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 30px;
+    background-size: cover;
+    background-position: center center;
+    z-index: 100;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick-slide,
+  .slick-slider {
+    pointer-events: none;
+  }
+
+  .slick-active {
+    .main-banner__button {
+      position: relative;
+      z-index: 100;
+      pointer-events: all !important;
+    }
+  }
+}

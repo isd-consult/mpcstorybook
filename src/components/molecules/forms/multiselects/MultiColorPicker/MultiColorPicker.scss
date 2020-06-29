@@ -1,0 +1,146 @@
+@import '~styles/settings/variables';
+
+.multi-color-picker {
+  $root: &;
+
+  position: relative;
+
+  &__item {
+    border-top: 1px solid $c-borderline;
+    padding: 10px 15px 10px 10px;
+    cursor: pointer;
+  }
+
+  &__color {
+    border: 1px solid $c-silver-chalice;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: $c-wildsand;
+  }
+
+  &__label {
+    display: inline-block;
+  }
+
+  &__item--active {
+    #{$root}__color {
+      border: 2px solid black;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__color--beige {
+    background-color: $c-beige;
+  }
+
+  &__color--black {
+    background-color: $c-black;
+  }
+
+  &__color--blue {
+    background-color: $c-blue;
+  }
+
+  &__color--brown {
+    background-color: $c-brown;
+  }
+
+  &__color--coral {
+    background-color: $c-coral;
+  }
+
+  &__color--darkblue {
+    background-color: $c-darkblue;
+  }
+
+  &__color--darkgreen {
+    background-color: $c-darkgreen;
+  }
+
+  &__color--gold {
+    background-color: $c-gold;
+  }
+
+  &__color--green {
+    background-color: $c-green;
+  }
+
+  &__color--grey {
+    background-color: $c-grey;
+  }
+
+  &__color--khakigreen {
+    background-color: $c-khakigreen;
+  }
+
+  &__color--lime {
+    background-color: $c-lime;
+  }
+
+  &__color--magenta {
+    background-color: $c-magenta;
+  }
+
+  &__color--maroon {
+    background-color: $c-maroon;
+  }
+
+  &__color--mint {
+    background-color: $c-mint;
+  }
+
+  &__color--multicolour {
+    background-image: linear-gradient(to bottom left, red, orange, yellow, green, blue);
+  }
+
+  &__color--navy {
+    background-color: $c-navy;
+  }
+
+  &__color--orange {
+    background-color: $c-orange;
+  }
+
+  &__color--palepink {
+    background-color: $c-palepink;
+  }
+
+  &__color--peach {
+    background-color: $c-peach;
+  }
+
+  &__color--pink {
+    background-color: $c-pink;
+  }
+
+  &__color--purple {
+    background-color: $c-purple;
+  }
+
+  &__color--red {
+    background-color: $c-red;
+  }
+
+  &__color--silver {
+    background-color: $c-silver;
+  }
+
+  &__color--tan {
+    background-color: $c-tan;
+  }
+
+  &__color--teal {
+    background-color: $c-teal;
+  }
+
+  &__color--white {
+    background-color: $c-white;
+  }
+
+  &__color--yellow {
+    background-color: $c-yellow;
+  }
+}

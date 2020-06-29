@@ -1,0 +1,58 @@
+@import '~styles/settings/variables';
+
+.step-pagination {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  background-color: #363636;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 15px;
+  width: 100%;
+
+  &__leftarrow {
+    fill: $c-white;
+  }
+
+  &__rightarrow {
+    fill: $c-light-sky;
+  }
+
+  &__triangle {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid $c-heavy-yellow;
+    position: absolute;
+    top: 7px;
+    transition: all 2s;
+  }
+
+  &__r100 {
+    background-color: $c-light-sky;
+    padding: 5px 10px;
+    border-style: dotted;
+    border-color: #363636;
+    color: #363636;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &__step--before {
+    color: $c-white;
+  }
+
+  &__step--cur {
+    color: $c-heavy-yellow;
+  }
+
+  &__step--after {
+    color: $c-light-sky;
+  }
+
+  &__r100--active {
+    background-color: $c-heavy-yellow;
+    color: $c-white;
+  }
+}

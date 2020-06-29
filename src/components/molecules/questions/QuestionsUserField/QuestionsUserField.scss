@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.questions-user-field {
+  $root: &;
+
+  position: relative;
+
+  &__button {
+    cursor: pointer;
+    user-select: none;
+  }
+}

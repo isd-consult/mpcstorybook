@@ -1,0 +1,11 @@
+@import '~styles/settings/variables';
+
+.section-category {
+  $root: &;
+
+  position: relative;
+
+  &--wildsand {
+    background: $c-wildsand;
+  }
+}

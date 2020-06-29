@@ -1,0 +1,21 @@
+@import '~styles/settings/variables';
+
+.questions {
+  $root: &;
+
+  position: relative;
+
+  &__closebtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    z-index: $z-low;
+  }
+
+  &__pagination {
+    position: fixed !important;
+    bottom: 0;
+    z-index: $z-low;
+  }
+}

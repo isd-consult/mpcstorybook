@@ -1,0 +1,42 @@
+@import '../settings/variables';
+$mediaList: sm 'small', md 'medium', lg 'large', xl 'xlarge';
+
+// =======================================
+// Text align
+// =======================================
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+// =======================================
+// Reponsive
+// =======================================
+@each $mq in $mediaList {
+  $key: nth($mq, 1);
+  $value: nth($mq, 2);
+
+  @include media('>=#{$value}') {
+    // =======================================
+    // Text align
+    // =======================================
+    .ta-left-#{$key} {
+      text-align: left;
+    }
+
+    .ta-center-#{$key} {
+      text-align: center;
+    }
+
+    .ta-right-#{$key} {
+      text-align: right;
+    }
+  }
+}

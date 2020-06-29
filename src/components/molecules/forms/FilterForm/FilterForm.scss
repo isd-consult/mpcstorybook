@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.filter-form {
+  $root: &;
+
+  position: relative;
+
+  &__checkbox {
+    padding: 10px 10px;
+    border-top: 1px solid $c-borderline;
+  }
+}

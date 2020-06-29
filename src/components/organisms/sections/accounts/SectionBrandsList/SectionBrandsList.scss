@@ -1,0 +1,18 @@
+@import '~styles/settings/variables';
+
+.section-brands-list {
+  $root: &;
+
+  position: relative;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+
+  &__plusbtn {
+    background: transparent;
+  }
+
+  &__empty {
+    height: 20px;
+  }
+}

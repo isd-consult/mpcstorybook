@@ -1,0 +1,72 @@
+@import '~styles/settings/variables';
+
+.number {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  max-width: 120px;
+  margin: 0 auto;
+
+  &__control {
+    height: 28px;
+    width: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    text-decoration: none;
+    color: $c-black;
+    font-size: 24px;
+    line-height: 22px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    &:active {
+      color: $c-white;
+      border-color: $c-grey;
+    }
+  }
+
+  &__quantity {
+    height: 28px;
+    width: 28px;
+    text-align: center;
+    margin: 0 12px;
+    border-radius: 2px;
+    border: 1px solid lighten($c-grey, 20);
+
+    &:focus {
+      outline: none;
+      border-color: $c-green;
+    }
+  }
+
+  &--small {
+    #{$root}__control {
+      height: 22px;
+      width: 22px;
+    }
+
+    #{$root}__quantity {
+      height: 22px;
+      width: 22px;
+      margin: 0 2px;
+    }
+  }
+
+  &--disabled {
+    #{$root}__control {
+      color: $c-grey;
+    }
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}

@@ -1,0 +1,33 @@
+@import '~styles/settings/variables';
+
+.input-field {
+  $root: &;
+
+  position: relative;
+
+  &__text {
+    width: 100%;
+  }
+
+  &--men {
+    #{$root}__text {
+      &:focus,
+      &:active {
+        border: 1px solid $c-light-cerulean;
+      }
+    }
+  }
+
+  &--women {
+    #{$root}__text {
+      &:focus,
+      &:active {
+        border: 1px solid $c-coral-tree;
+      }
+    }
+  }
+
+  &__error {
+    color: $c-bright-chico;
+  }
+}

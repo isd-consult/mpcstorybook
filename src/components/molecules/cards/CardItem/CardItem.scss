@@ -1,0 +1,109 @@
+@import '~styles/settings/variables';
+
+.card-item {
+  $root: &;
+
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 125px;
+
+  &__head {
+    position: relative;
+    display: inline-flex;
+
+    @include darkOverlay;
+
+    &::before {
+      box-shadow: $bs-normal;
+    }
+  }
+
+  &__image {
+    height: 165px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__badge {
+    position: absolute;
+    right: -5px;
+    top: 10px;
+    padding: 0 5px;
+    min-width: 40px;
+    background: $c-black;
+    transition: background $t-normal, color $t-normal;
+  }
+
+  &__unseen {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    min-width: 40px;
+    transition: background $t-normal, color $t-normal;
+  }
+
+  &__favorite {
+    position: absolute !important;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  &__price {
+    color: rgba($c-white, 0.75);
+  }
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    #{$root}__badge {
+      background: $c-black-squeeze;
+    }
+  }
+
+  &--women {
+    #{$root}__badge {
+      background: $c-pot-pourri;
+    }
+  }
+
+  //------------------------------
+  // => Modifiers
+  //------------------------------
+  &:focus-visible {
+    #{$root}__head {
+      @include darkOverlayOpacity(0.5);
+    }
+  }
+
+  &--rounded {
+    max-width: 85px;
+    width: 85px;
+
+    #{$root}__head {
+      &::before {
+        border-radius: 50%;
+      }
+    }
+
+    #{$root}__image {
+      border-radius: 50%;
+      height: 85px;
+    }
+
+    #{$root}__favorite {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &--small {
+    #{$root}__image {
+      height: 125px;
+      width: 125px;
+    }
+  }
+}

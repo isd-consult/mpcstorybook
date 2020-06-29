@@ -1,0 +1,69 @@
+@import '~styles/settings/variables';
+
+.page {
+  $root: &;
+
+  &--left {
+    &-enter {
+      transform: translate3d(100%, 0, 0);
+    }
+
+    &-enter-active,
+    &-exit-active {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      top: 0;
+    }
+
+    &-enter-active {
+      z-index: $z-high;
+      transform: translate3d(0, 0, 0);
+      transition: all $t-medium ease-in-out;
+    }
+
+    &-exit {
+      z-index: $z-low;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &-exit-active {
+      transform: translate3d(100%, 0, 0);
+      transition: all $t-medium ease-in-out;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &--right {
+    &-enter {
+      transform: translate3d(-100%, 0, 0);
+    }
+
+    &-enter-active,
+    &-exit-active {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      top: 0;
+    }
+
+    &-enter-active {
+      z-index: $z-high;
+      transform: translate3d(0, 0, 0);
+      transition: all $t-medium ease-in-out;
+    }
+
+    &-exit {
+      z-index: $z-low;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &-exit-active {
+      transform: translate3d(-100%, 0, 0);
+      transition: all $t-medium ease-in-out;
+    }
+  }
+}

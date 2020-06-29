@@ -1,0 +1,109 @@
+@import '~styles/settings/variables';
+
+.questions-quiz {
+  $root: &;
+
+  position: relative;
+  background: $c-q-1;
+  height: calc(100vh - 60px);
+  max-height: -webkit-fill-available;
+
+  &__content {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    max-height: -webkit-fill-available;
+  }
+
+  &__done {
+    padding: 15px;
+    background: $c-white;
+    border-radius: 5px;
+  }
+
+  &__part {
+    background: $c-q-1;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &:first-child {
+      padding-top: 50px;
+    }
+
+    &:last-child {
+      padding-bottom: 80px;
+    }
+
+    &:nth-child(even) {
+      background: lighten($c-q-1, 7);
+    }
+  }
+
+  &__pagination {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &--2 {
+    background: $c-q-2;
+
+    #{$root}__part {
+      background: $c-q-2;
+
+      &:nth-child(even) {
+        background: lighten($c-q-2, 7);
+      }
+    }
+  }
+
+  &--3 {
+    background: $c-q-3;
+
+    #{$root}__part {
+      background: $c-q-3;
+
+      &:nth-child(even) {
+        background: lighten($c-q-3, 7);
+      }
+    }
+  }
+
+  &--4 {
+    background: $c-q-4;
+
+    #{$root}__part {
+      background: $c-q-4;
+
+      &:nth-child(even) {
+        background: lighten($c-q-4, 7);
+      }
+    }
+  }
+
+  &--5 {
+    background: $c-q-5;
+
+    #{$root}__part {
+      background: $c-q-5;
+
+      &:nth-child(even) {
+        background: lighten($c-q-5, 7);
+      }
+    }
+  }
+
+  &--6 {
+    background: $c-q-6;
+
+    #{$root}__part {
+      background: $c-q-6;
+
+      &:nth-child(even) {
+        background: lighten($c-q-5, 7);
+      }
+    }
+  }
+}

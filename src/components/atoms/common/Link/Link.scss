@@ -1,0 +1,13 @@
+@import '~styles/settings/variables';
+
+.link {
+  $root: &;
+
+  position: relative;
+  display: flex;
+
+  &__label {
+    padding-top: 2px;
+    margin: 0 5px;
+  }
+}

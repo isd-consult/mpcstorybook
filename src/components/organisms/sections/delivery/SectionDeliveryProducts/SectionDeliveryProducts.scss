@@ -1,0 +1,9 @@
+@import '~styles/settings/variables';
+
+.section-delivery-products {
+  $root: &;
+
+  position: relative;
+  margin: 20px 0 0;
+  background: $c-wildsand;
+}

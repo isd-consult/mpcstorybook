@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.return-detail {
+  $root: &;
+
+  position: relative;
+}

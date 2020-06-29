@@ -1,0 +1,37 @@
+@import '~styles/settings/variables';
+
+.section-return {
+  $root: &;
+
+  position: relative;
+
+  &__header {
+    padding: 10px 10px 10px 20px;
+    background-color: $c-wildsand;
+    color: $c-grey;
+    width: 100%;
+  }
+
+  &__body {
+    padding: 10px 10px 10px 20px;
+    width: 100%;
+  }
+
+  &__text {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  &__status {
+    padding: 10px 10px 10px 20px;
+    color: $c-grey;
+    border: 1px solid $c-wildsand;
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  &__status-text {
+    color: $c-lime;
+  }
+}

@@ -1,0 +1,20 @@
+@import '~styles/settings/variables';
+
+.section-fbucks {
+  $root: &;
+
+  position: relative;
+
+  &__fc-grey {
+    color: $c-silver-chalice;
+  }
+
+  &__facts {
+    padding-left: 20px;
+    color: $c-silver-chalice;
+
+    li {
+      margin-top: 5px;
+    }
+  }
+}

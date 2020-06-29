@@ -1,0 +1,48 @@
+@import "~styles/settings/variables";
+
+.section-order-card {
+  $root: &;
+
+  position: relative;
+  border: solid 1px $c-borderline;
+  border-radius: 3px;
+  padding: 17px 16px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      display: flex;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 30%;
+    padding-right: 10px;
+    opacity: 0.5;
+    color: $c-order-label;
+  }
+
+  &__desc {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 70%;
+  }
+
+  &__btn {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  &__btn-view {
+    color: black;
+    font-size: 12px;
+    height: 44px;
+  }
+}

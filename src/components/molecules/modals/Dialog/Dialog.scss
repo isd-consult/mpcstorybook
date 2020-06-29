@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.dialog {
+  $root: &;
+
+  position: relative;
+  background-color: $c-white;
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+  padding: 30px;
+}

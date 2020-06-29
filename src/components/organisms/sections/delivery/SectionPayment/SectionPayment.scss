@@ -1,0 +1,44 @@
+@import '~styles/settings/variables';
+
+.section-payment {
+  $root: &;
+
+  position: relative;
+
+  &__payment-option {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+  }
+
+  &__payment-detail {
+    display: block;
+    padding: 0 20px 20px;
+  }
+
+  &__card-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: $c-wildsand;
+
+    &-remove {
+      position: absolute;
+      right: 40px;
+    }
+  }
+
+  &__addCard {
+    margin-top: 10px;
+    background: $c-white;
+    border: 1px solid black;
+    padding: 15px;
+    color: black;
+  }
+
+  &__dtd {
+    margin: 10px calc(50% - 90px);
+  }
+}

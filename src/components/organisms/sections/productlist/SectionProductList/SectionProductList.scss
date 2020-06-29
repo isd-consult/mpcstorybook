@@ -1,0 +1,31 @@
+@import '~styles/settings/variables';
+
+.section-product-list {
+  $root: &;
+
+  position: relative;
+
+  &__morebtn {
+    width: 200px;
+  }
+
+  &__detail {
+    width: 100%;
+  }
+
+  &__no-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      flex-basis: 20%;
+      padding-right: 10px;
+    }
+
+    &-desc {
+      flex-basis: 80%;
+      padding-left: 10px;
+    }
+  }
+}

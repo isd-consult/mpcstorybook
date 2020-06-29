@@ -1,0 +1,14 @@
+@import '~styles/settings/variables';
+
+.menulist {
+  $root: &;
+
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  background-color: $c-white;
+
+  &__item {
+    cursor: pointer;
+  }
+}

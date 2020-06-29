@@ -1,0 +1,23 @@
+@import '~styles/settings/variables';
+
+.section-brands-items {
+  $root: &;
+
+  position: relative;
+  background: $c-black;
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    background: $c-deep-cerulean;
+  }
+
+  &--women {
+    background: $c-au-chico;
+  }
+
+  &--rounded {
+    background: $c-wildsand;
+  }
+}

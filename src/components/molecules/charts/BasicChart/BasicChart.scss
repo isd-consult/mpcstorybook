@@ -1,0 +1,14 @@
+@import '~styles/settings/variables';
+
+.basic-chart {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  &__bar {
+    border: 1px solid $c-borderline;
+    flex: 1 1 auto;
+  }
+}

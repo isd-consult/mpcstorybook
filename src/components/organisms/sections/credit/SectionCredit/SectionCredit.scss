@@ -1,0 +1,77 @@
+@import '~styles/settings/variables';
+
+.section-credit {
+  $root: &;
+
+  position: relative;
+
+  &__balance {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__cashout-btn {
+    height: 30px;
+    width: 160px;
+  }
+
+  &__table {
+    &-head {
+      height: 43px;
+      background-color: $c-wildsand;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-top: 10px;
+      color: $c-order-label;
+
+      &-desc {
+        flex-basis: 70%;
+      }
+
+      &-amount {
+        flex-basis: 30%;
+      }
+    }
+  }
+}
+
+.fbuck-item {
+  $root: &;
+
+  position: relative;
+
+  &__body {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+
+    &-icon {
+      flex-basis: 15%;
+      object-fit: contain;
+    }
+
+    &-desc {
+      flex-basis: 60%;
+    }
+  }
+
+  &__extra {
+    height: 0;
+    padding: 0 10px 0 55px;
+    opacity: 0;
+    align-items: center;
+    background-color: $c-wildsand;
+    transition: all 0.5s;
+    justify-content: space-between;
+  }
+
+  &--active {
+    #{$root}__extra {
+      height: 93px;
+      padding: 10px 10px 10px 55px;
+      opacity: 1;
+    }
+  }
+}

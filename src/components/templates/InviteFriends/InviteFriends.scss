@@ -1,0 +1,27 @@
+@import '~styles/settings/variables';
+
+.invite-friends {
+  $root: &;
+
+  position: relative;
+
+  &__email-icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__send-invitation {
+    background-color: $c-wildsand;
+    color: $c-black;
+  }
+
+  &__share-on-facebook {
+    background-color: #3c5899;
+    width: calc(50% - 10px);
+  }
+
+  &__share-on-twitter {
+    background-color: #00acee;
+    width: calc(50% - 10px);
+  }
+}

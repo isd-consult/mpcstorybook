@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.open-close-box {
+  $root: &;
+
+  position: relative;
+}

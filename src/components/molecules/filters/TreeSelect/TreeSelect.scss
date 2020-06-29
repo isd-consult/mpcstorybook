@@ -1,0 +1,26 @@
+@import '~styles/settings/variables';
+
+.tree-select {
+  $root: &;
+
+  position: relative;
+}
+
+.tree-select-item {
+  $root: &;
+
+  position: relative;
+
+  &__tab {
+    height: 40px;
+    border-top: 1px solid $c-borderline;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 30px;
+    padding-right: 10px;
+  }
+}

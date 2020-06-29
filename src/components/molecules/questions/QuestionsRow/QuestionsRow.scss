@@ -1,0 +1,47 @@
+@import '~styles/settings/variables';
+
+.questions-row {
+  $root: &;
+
+  position: relative;
+
+  &__scroller {
+    overflow: auto;
+  }
+
+  &__items {
+    display: flex;
+
+    & > {
+      display: inline-flex;
+    }
+  }
+
+  &__item-wrapper {
+    display: flex;
+    justify-content: center;
+    background: $c-white;
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+
+  &--secondary {
+    #{$root}__items {
+      background: $c-white;
+      border-radius: 5px;
+      min-width: 440px;
+      flex-wrap: wrap;
+    }
+
+    #{$root}__item-wrapper {
+      background: none;
+      border-radius: 0;
+    }
+  }
+}

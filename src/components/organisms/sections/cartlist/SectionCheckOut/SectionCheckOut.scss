@@ -1,0 +1,11 @@
+@import '~styles/settings/variables';
+
+.section-check-out {
+  $root: &;
+
+  position: relative;
+
+  &__dtd {
+    margin: 10px calc(50% - 90px);
+  }
+}

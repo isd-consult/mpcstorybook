@@ -1,0 +1,18 @@
+@import '~styles/settings/variables';
+
+.section-new-items {
+  $root: &;
+
+  position: relative;
+  background: $c-black;
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    background: $c-deep-cerulean;
+  }
+
+  &--women {
+    background: $c-au-chico;
+  }
+}

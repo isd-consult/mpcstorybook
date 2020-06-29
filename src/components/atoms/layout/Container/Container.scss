@@ -1,0 +1,14 @@
+@import '~styles/settings/variables';
+
+.a-container {
+  position: relative;
+  width: 100%;
+  max-width: 990px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--fluid {
+    max-width: 100%;
+  }
+}

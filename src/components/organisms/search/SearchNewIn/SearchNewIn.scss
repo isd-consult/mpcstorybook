@@ -1,0 +1,13 @@
+@import '~styles/settings/variables';
+
+.search-new-in {
+  $root: &;
+
+  position: relative;
+
+  &__nav {
+    &-item {
+      display: block;
+    }
+  }
+}

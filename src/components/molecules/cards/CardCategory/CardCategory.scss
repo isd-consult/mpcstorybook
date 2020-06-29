@@ -1,0 +1,88 @@
+@import '~styles/settings/variables';
+
+.card-category {
+  $root: &;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__image-wrap {
+    position: relative;
+    display: inline-flex;
+
+    @include darkOverlay;
+  }
+
+  &__image {
+    height: 135px;
+    width: 155px;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  //------------------------------
+  // => Modifiers
+  //------------------------------
+  &--small {
+    #{$root}__image-wrap {
+      box-shadow: $bs-light;
+    }
+
+    #{$root}__image {
+      width: 90px;
+      height: 85px;
+    }
+
+    #{$root}__name {
+      max-width: 80px;
+      text-overflow: ellipsis;
+      font-size: 14px;
+    }
+  }
+
+  &:focus-visible {
+    #{$root}__image-wrap {
+      @include darkOverlayOpacity(0.5);
+    }
+  }
+
+  &--rounded {
+    #{$root}__image-wrap {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    #{$root}__image {
+      width: 70px;
+      height: 70px;
+    }
+
+    #{$root}__content {
+      position: relative;
+      max-width: 70px;
+    }
+  }
+
+  &--flexed {
+    #{$root}__image-wrap {
+      width: 100%;
+    }
+
+    #{$root}__image {
+      width: 100%;
+      height: 100px;
+    }
+  }
+}

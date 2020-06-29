@@ -1,0 +1,16 @@
+@import '~styles/settings/variables';
+
+.section-account-address-book {
+  $root: &;
+
+  position: relative;
+
+  &__add-new-address {
+    background-color: $c-wildsand;
+    color: $c-black;
+  }
+
+  &__flex-container {
+    display: flex;
+  }
+}

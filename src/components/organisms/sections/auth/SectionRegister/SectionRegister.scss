@@ -1,0 +1,87 @@
+@import '~styles/settings/variables';
+
+.section-register {
+  $root: &;
+
+  position: relative;
+
+  &__logo {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__navigator {
+    height: 45px;
+  }
+
+  &__logintab {
+    border: 1px solid #e6e5e5;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    width: 50%;
+    float: left;
+    background-color: #f0efef;
+    opacity: 0.8;
+    border-right-width: 0;
+
+    &--active {
+      border-color: $c-bright-chico;
+      color: $c-bright-chico;
+      background-color: $c-white;
+      border-right-width: 1px;
+    }
+  }
+
+  &__registertab {
+    border: 1px solid #e6e5e5;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    width: 50%;
+    float: left;
+    background-color: #f0efef;
+    opacity: 0.8;
+    border-left-width: 0;
+
+    &--active {
+      border-color: $c-bright-chico;
+      color: $c-bright-chico;
+      background-color: $c-white;
+      border-left-width: 1px;
+    }
+  }
+
+  &__statue {
+    height: 35px;
+  }
+
+  &__error {
+    color: $c-bright-chico;
+  }
+
+  &__codemark {
+    float: left;
+    fill: $c-bright-chico;
+  }
+
+  &__codetext {
+    float: left;
+  }
+
+  &__subtitle {
+    margin-top: 7px;
+    opacity: 0.5;
+  }
+
+  &__facebook {
+    background-color: #3c5899;
+    width: calc(100% - 20px);
+  }
+
+  &__google {
+    background-color: $c-bright-chico;
+    width: calc(100% - 20px);
+  }
+}

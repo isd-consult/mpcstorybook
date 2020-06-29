@@ -1,0 +1,29 @@
+@import '~styles/settings/variables';
+
+.icon {
+  position: relative;
+
+  &--flipped-vertical {
+    transform: scaleY(-1);
+  }
+
+  &--flipped-horizontal {
+    transform: scaleX(-1);
+  }
+
+  &--left {
+    transform: rotate(-90deg);
+  }
+
+  &--right {
+    transform: rotate(90deg);
+  }
+
+  &--men {
+    fill: $c-deep-cerulean;
+  }
+
+  &--women {
+    fill: $c-coral-tree;
+  }
+}

@@ -1,0 +1,102 @@
+@import '~styles/settings/variables';
+
+.section-delivery-address {
+  $root: &;
+
+  position: relative;
+
+  &__confirm {
+    border: 1px solid $c-bright-chico !important;
+    padding: 15px 20px;
+  }
+
+  &__confirm-icon {
+    fill: $c-bright-chico;
+  }
+
+  &__confirm-text {
+    color: $c-bright-chico;
+    margin-left: 10px;
+  }
+
+  &__address-type {
+    padding: 15px;
+
+    label {
+      font-weight: bold;
+      position: relative;
+      padding-left: 28px;
+      padding-top: 3px;
+    }
+
+    .address-name {
+      font-size: 18px;
+    }
+
+    .address-desc {
+      padding-left: 25px;
+      font-size: 14px;
+    }
+
+    .address-edit {
+      float: right;
+      font-size: 14px;
+
+      a {
+        color: #c09191;
+      }
+    }
+
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+    }
+
+    input + .address-name::before {
+      content: '';
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #ddd;
+      border-radius: 100%;
+      background: #fff;
+    }
+
+    [type="radio"]:checked + .address-name::before {
+      border: 1px solid black;
+    }
+
+    [type="radio"]:checked + .address-name::after,
+    [type="radio"]:not(:checked) + .address-name::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: black;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+
+    [type="radio"]:not(:checked) + .address-name::after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+
+    [type="radio"]:checked + .address-name::after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  &__dtd {
+    margin: 10px calc(50% - 90px);
+  }
+}

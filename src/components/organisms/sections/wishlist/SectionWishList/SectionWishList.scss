@@ -1,0 +1,20 @@
+@import "~styles/settings/variables";
+
+.section-wish-list {
+  $root: &;
+
+  position: relative;
+
+  &__title {
+    background-color: $c-wildsand;
+  }
+
+  &__morebtn {
+    width: 35%;
+  }
+
+  &__item {
+    margin: 0 15px;
+    padding: 15px 0;
+  }
+}

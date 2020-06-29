@@ -1,0 +1,40 @@
+@import '~styles/settings/variables';
+
+.text-with-icon {
+  $root: &;
+
+  position: relative;
+  display: flex;
+
+  &__img-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+  }
+
+  &__text-section {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--text-direction {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    div {
+      padding-right: 5px;
+    }
+  }
+
+  &--secondary {
+    align-items: center;
+  }
+}

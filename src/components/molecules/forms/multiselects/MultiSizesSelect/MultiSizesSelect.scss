@@ -1,0 +1,11 @@
+@import '~styles/settings/variables';
+
+.multi-sizes-select {
+  $root: &;
+
+  position: relative;
+
+  &__item {
+    margin-right: 3px;
+  }
+}

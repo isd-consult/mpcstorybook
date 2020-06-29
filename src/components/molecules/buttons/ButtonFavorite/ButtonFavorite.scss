@@ -1,0 +1,55 @@
+@import '~styles/settings/variables';
+
+.button-favorite {
+  $root: &;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: $c-wildsand;
+  cursor: pointer;
+
+  &__icon {
+    fill: transparent;
+    stroke: $c-black;
+    stroke-width: 30;
+    transition: fill $t-normal, stroke $t-normal;
+  }
+
+  &--favorite {
+    #{$root}__icon {
+      fill: $c-black;
+    }
+  }
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    #{$root}__icon {
+      stroke: $c-deep-cerulean;
+    }
+
+    &#{$root}--favorite {
+      #{$root}__icon {
+        fill: $c-deep-cerulean;
+      }
+    }
+  }
+
+  &--women {
+    #{$root}__icon {
+      stroke: $c-tumbleweed;
+    }
+
+    &#{$root}--favorite {
+      #{$root}__icon {
+        fill: $c-tumbleweed;
+      }
+    }
+  }
+}

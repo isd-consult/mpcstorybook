@@ -1,0 +1,28 @@
+@import '~styles/settings/variables';
+
+.page-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forgot-password-page {
+  $root: &;
+
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    position: fixed;
+    text-align: center;
+    top: calc(25vh - 130px);
+    left: calc(50% - 110px);
+
+    a {
+      font-size: $f-size-h2;
+    }
+  }
+}

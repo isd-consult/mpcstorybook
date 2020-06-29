@@ -1,0 +1,10 @@
+@import '~styles/settings/variables';
+
+.section-delivery-header {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

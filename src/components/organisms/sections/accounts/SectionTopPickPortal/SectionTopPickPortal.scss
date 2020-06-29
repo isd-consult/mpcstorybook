@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.section-top-pick-portal {
+  $root: &;
+
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  padding: 31px 0;
+  text-align: center;
+}

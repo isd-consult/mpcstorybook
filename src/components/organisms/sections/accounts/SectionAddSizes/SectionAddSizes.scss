@@ -1,0 +1,22 @@
+@import '~styles/settings/variables';
+
+.section-add-sizes {
+  $root: &;
+
+  position: relative;
+  padding: 30px 50px;
+  background: $c-wildsand;
+
+  &__addbtn {
+    margin-top: 15px;
+    width: 150px;
+  }
+
+  &--men {
+    background: $c-light-cerulean;
+  }
+
+  &--women {
+    background: $c-coral-tree;
+  }
+}

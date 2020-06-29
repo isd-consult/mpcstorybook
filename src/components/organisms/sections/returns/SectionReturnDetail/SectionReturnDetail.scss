@@ -1,0 +1,49 @@
+@import '~styles/settings/variables';
+
+.section-return-detail {
+  $root: &;
+
+  position: relative;
+
+  &__header {
+    height: 43px;
+    background-color: $c-wildsand;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: $c-order-label;
+
+    &-product {
+      flex-basis: 90%;
+    }
+
+    &-qty {
+      flex-basis: 10%;
+    }
+  }
+
+  &__row {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+
+    &-img {
+      flex-basis: 20%;
+
+      img {
+        width: 100%;
+        height: 55px;
+        object-fit: contain;
+      }
+    }
+
+    &-desc {
+      padding: 0 15px 0 10px;
+      flex-basis: 68%;
+    }
+  }
+
+  &__return-btn {
+    width: calc(100% - 20px);
+  }
+}

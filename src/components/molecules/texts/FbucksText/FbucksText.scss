@@ -1,0 +1,57 @@
+@import '~styles/settings/variables';
+
+.fbucks-text {
+  $root: &;
+
+  position: relative;
+
+  &__svg {
+    height: 20px;
+    width: 90px;
+  }
+
+  &__polyline1 {
+    fill: none;
+    stroke: $c-black;
+    stroke-width: 1px;
+  }
+
+  &__polyline2 {
+    fill: none;
+    stroke: $c-black;
+    stroke-width: 2px;
+  }
+
+  &__text {
+    fill: $c-black;
+    font-size: 10px;
+  }
+
+  &--men {
+    #{$root}__polyline1 {
+      stroke: $c-deep-cerulean;
+    }
+
+    #{$root}__polyline2 {
+      stroke: $c-deep-cerulean;
+    }
+
+    #{$root}__text {
+      fill: $c-deep-cerulean;
+    }
+  }
+
+  &--women {
+    #{$root}__polyline1 {
+      stroke: $c-bright-chico;
+    }
+
+    #{$root}__polyline2 {
+      stroke: $c-bright-chico;
+    }
+
+    #{$root}__text {
+      fill: $c-bright-chico;
+    }
+  }
+}

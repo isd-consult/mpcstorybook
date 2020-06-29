@@ -1,0 +1,56 @@
+@import '~styles/settings/variables';
+
+.cancel-item-card {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  &__checkbox {
+    flex-basis: 5%;
+    padding: 2px;
+  }
+
+  &__img {
+    flex-basis: 20%;
+    padding: 2px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  &__product-name {
+    flex-basis: 40%;
+  }
+
+  &__price {
+    flex-basis: 10%;
+  }
+}
+
+.section-order-cancel {
+  $root: &;
+
+  position: relative;
+
+  &__table {
+    &-head {
+      height: 43px;
+      background-color: $c-wildsand;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-top: 10px;
+      color: $c-order-label;
+
+      &-choose {
+        flex-basis: 25%;
+      }
+
+      &-product {
+        flex-basis: 65%;
+      }
+    }
+  }
+}

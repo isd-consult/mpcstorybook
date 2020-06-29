@@ -1,0 +1,15 @@
+@import '~styles/settings/variables';
+
+.section-cart-list {
+  $root: &;
+
+  position: relative;
+
+  &__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+    background-color: $c-wildsand;
+  }
+}

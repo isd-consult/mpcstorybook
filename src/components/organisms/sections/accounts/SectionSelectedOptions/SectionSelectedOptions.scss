@@ -1,0 +1,8 @@
+@import '~styles/settings/variables';
+
+.section-selected-options {
+  $root: &;
+
+  position: relative;
+  padding: 15px 30px;
+}

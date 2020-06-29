@@ -1,0 +1,13 @@
+@import '~styles/settings/variables';
+
+.questions-exit {
+  $root: &;
+
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+
+  &__icon {
+    fill: $c-white;
+  }
+}

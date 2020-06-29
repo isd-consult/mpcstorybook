@@ -1,0 +1,22 @@
+@import '~styles/settings/variables';
+
+.returns {
+  $root: &;
+
+  position: relative;
+
+  &__icon {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  &__policy {
+    margin-right: calc(50% - 110px);
+    margin-left: calc(50% - 110px);
+  }
+
+  &__request-return {
+    background-color: $c-wildsand;
+    color: $c-black;
+  }
+}

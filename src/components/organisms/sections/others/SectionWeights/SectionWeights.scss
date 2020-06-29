@@ -1,0 +1,16 @@
+@import '~styles/settings/variables';
+
+.section-weights {
+  $root: &;
+
+  position: relative;
+
+  &__desc {
+    color: $c-silver-chalice;
+  }
+
+  &__space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+}

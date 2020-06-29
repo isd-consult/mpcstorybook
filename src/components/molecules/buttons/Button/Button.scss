@@ -1,0 +1,125 @@
+@import '~styles/settings/variables';
+
+.button {
+  $root: &;
+
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  border: none;
+  padding: 0 15px;
+  border-radius: 20px;
+  color: $c-white;
+  text-decoration: none !important;
+  background-color: $c-black;
+  transition: background $t-normal;
+
+  &__icon {
+    fill: $c-white;
+    pointer-events: none;
+    transition: $t-normal;
+  }
+
+  &__loading {
+    margin-left: 10px;
+    margin-top: 3px;
+    border-top-color: $c-white !important;
+  }
+
+  // @include hover {
+  //   background-color: lighten($c-black, 5);
+  // }
+
+  //------------------------------
+  // => MODIFIERS
+  //------------------------------
+  &--auto {
+    width: auto;
+  }
+
+  &--full {
+    max-width: 100%;
+  }
+
+  &--centered {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--small {
+    height: 35px;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--women {
+    background-color: $c-au-chico;
+
+    @include hover {
+      background-color: darken($c-au-chico, 5);
+    }
+
+    &#{$root}--secondary {
+      background: $c-coral-tree;
+
+      @include hover {
+        background-color: darken($c-coral-tree, 5);
+      }
+    }
+  }
+
+  &--men {
+    background-color: $c-deep-cerulean;
+
+    @include hover {
+      background-color: darken($c-deep-cerulean, 5);
+    }
+
+    &#{$root}--secondary {
+      background: $c-ziggurat;
+
+      @include hover {
+        background-color: darken($c-ziggurat, 5);
+      }
+    }
+  }
+
+  &--tertiary {
+    background: $c-white;
+    color: $c-black;
+
+    #{$root}__icon {
+      fill: darken($c-black, 5);
+    }
+
+    @include hover {
+      background-color: darken($c-white, 5);
+    }
+  }
+
+  &--grey {
+    background: $c-wildsand;
+    color: $c-black;
+
+    #{$root}__icon {
+      fill: darken($c-black, 5);
+    }
+
+    #{$root}__loading {
+      border-color: $c-white;
+      border-top-color: $c-black !important;
+    }
+  }
+}

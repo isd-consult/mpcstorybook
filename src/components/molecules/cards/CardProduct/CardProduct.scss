@@ -1,0 +1,145 @@
+@import '~styles/settings/variables';
+
+.card-product {
+  $root: &;
+
+  position: relative;
+  margin: auto;
+  display: block;
+
+  &__head {
+    position: relative;
+    display: block;
+  }
+
+  &__overlay,
+  &__overlaytitle {
+    display: none;
+  }
+
+  &__image-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $bs-normal;
+
+    @include xxsmall {
+      min-height: 200px;
+    }
+
+    @include xsmall {
+      min-height: 216.8px;
+    }
+
+    @include small {
+      min-height: 221px;
+    }
+
+    @include large {
+      min-height: 187.33px;
+    }
+
+    @include xlarge {
+      min-height: 196.27px;
+    }
+  }
+
+  &__image {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+  }
+
+  &__badge {
+    position: absolute;
+    right: -5px;
+    top: 10px;
+    padding: 0 5px;
+    min-width: 40px;
+    background: $c-black;
+    transition: background $t-normal, color $t-normal;
+  }
+
+  &__unseen {
+    position: absolute;
+    display: flex;
+    left: 7px;
+    bottom: 5px;
+    transition: background $t-normal, color $t-normal;
+  }
+
+  &__new {
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+
+  &__fbucks {
+    position: absolute;
+    right: 7px;
+    bottom: 10px;
+    padding: 3px 5px;
+    background-color: $c-bright-chico;
+    color: $c-white;
+  }
+
+  &__favorite {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  &__cart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: $c-wildsand;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+
+  &__trackinginfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: $t-normal;
+  }
+
+  &:hover {
+    #{$root}__trackinginfo {
+      opacity: 1;
+    }
+
+    #{$root}__scoresinfo {
+      opacity: 0;
+    }
+  }
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    #{$root}__badge {
+      background: $c-black-squeeze;
+    }
+  }
+
+  &--women {
+    #{$root}__badge {
+      background: $c-pot-pourri;
+    }
+  }
+
+  &--read {
+    #{$root}__content {
+      .a-text {
+        color: $c-silver-chalice !important;
+      }
+    }
+  }
+}

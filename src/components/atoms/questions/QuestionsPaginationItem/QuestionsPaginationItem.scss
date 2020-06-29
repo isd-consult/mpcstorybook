@@ -1,0 +1,92 @@
+@import '~styles/settings/variables';
+
+.questions-pagination-item {
+  $root: &;
+
+  display: inline-flex;
+  position: relative;
+  padding: 3px 10px;
+  font-size: $f-size-xl;
+  transition: $t-normal;
+  color: $c-q-1;
+  cursor: pointer;
+
+  &--disabled {
+    pointer-events: none;
+    color: lighten($c-q-black, 10);
+  }
+
+  &--r {
+    pointer-events: none;
+    border: 2px dotted $c-q-black;
+    background-color: $c-q-1;
+    color: $c-q-black !important;
+  }
+
+  &--2 {
+    color: $c-q-2;
+
+    &#{$root}--r {
+      background-color: $c-q-2;
+    }
+  }
+
+  &--3 {
+    color: $c-q-3;
+
+    &#{$root}--r {
+      background-color: $c-q-3;
+    }
+  }
+
+  &--4 {
+    color: $c-q-4;
+
+    &#{$root}--r {
+      background-color: $c-q-4;
+    }
+  }
+
+  &--5 {
+    color: $c-q-5;
+
+    &#{$root}--r {
+      background-color: $c-q-5;
+    }
+  }
+
+  &--6 {
+    color: $c-q-6;
+
+    &#{$root}--r {
+      background-color: $c-q-6;
+    }
+  }
+
+  &--prev {
+    color: $c-white;
+    // pointer-events: none;
+  }
+
+  &--current {
+    pointer-events: none;
+    color: $c-q-yellow;
+
+    &#{$root}--r {
+      background-color: $c-q-yellow;
+      color: $c-white !important;
+      // border-color: $c-white;
+    }
+
+    &::after {
+      content: '';
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid $c-q-yellow;
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

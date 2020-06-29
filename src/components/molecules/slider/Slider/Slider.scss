@@ -1,0 +1,15 @@
+@import '~styles/settings/variables';
+
+.slider {
+  $root: &;
+
+  position: relative;
+  height: 358px;
+
+  &__nativigator {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}

@@ -1,0 +1,63 @@
+@import '~styles/settings/variables';
+
+.slide-navigator-item {
+  $root: &;
+
+  position: relative;
+  float: left;
+  margin: 2px;
+  background: none;
+  width: 24px;
+  height: 24px;
+
+  &__outer {
+    width: 24px;
+    height: 24px;
+    padding: 7px;
+    border-radius: 50% !important;
+    background: $c-silver-chalice;
+    display: none;
+  }
+
+  &__inner {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $c-tuna;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+  }
+
+  //------------------------------
+  // => Modifiers
+  //------------------------------
+  &--active {
+    #{$root}__outer {
+      display: block;
+    }
+  }
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    #{$root}__inner {
+      background: $c-deep-cerulean;
+    }
+
+    #{$root}__outer {
+      background: $c-light-cerulean;
+    }
+  }
+
+  &--women {
+    #{$root}__inner {
+      background: $c-au-chico;
+    }
+
+    #{$root}__outer {
+      background: $c-quicksand;
+    }
+  }
+}

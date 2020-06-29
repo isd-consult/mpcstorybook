@@ -1,0 +1,26 @@
+@import '~styles/settings/variables';
+
+.card-address {
+  $root: &;
+
+  position: relative;
+  display: flex;
+
+  &__img_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  &__text_section {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+}

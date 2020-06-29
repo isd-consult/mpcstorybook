@@ -1,0 +1,90 @@
+@import '~styles/settings/variables';
+
+.wish-item {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  border-bottom: solid 1px $c-wildsand;
+
+  &__img-section {
+    flex-basis: 35%;
+    padding-right: 10px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info-section {
+    flex-basis: 60%;
+    padding-right: 10px;
+  }
+
+  &__price {
+    display: flex;
+  }
+
+  &__size-qty {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__sizeoptions {
+    .select__label {
+      padding: 8px 10px !important;
+
+      .select__icon {
+        top: 10px;
+        right: 7px;
+      }
+
+      .a-text {
+        font-size: 10px;
+      }
+    }
+
+    .select__dropmenu {
+      .a-text {
+        font-size: 10px;
+      }
+    }
+
+    width: 50%;
+  }
+
+  &__qty {
+    height: 22px;
+
+    .number__quantity {
+      width: 22px;
+      height: 22px;
+      margin: 0 6px;
+    }
+
+    .number__increment,
+    .number__decrement {
+      font-size: 14px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__addtobag {
+    margin-top: 10px;
+    width: 70%;
+    height: 25px;
+
+    .a-text {
+      font-size: 10px;
+    }
+  }
+
+  &__close {
+    .button {
+      padding: 0;
+    }
+  }
+}

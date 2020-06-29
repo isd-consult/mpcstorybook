@@ -1,0 +1,322 @@
+@import '~styles/settings/variables';
+
+.a-text {
+  $root: &;
+
+  word-wrap: break-word;
+  line-height: 1.313em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color $t-normal;
+
+  //------------------------------
+  // => Modifiers
+  //------------------------------
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+
+  //------------------------------
+  // => Font weight
+  //------------------------------
+  &--h1,
+  &--h2,
+  &--h3 {
+    font-weight: bold;
+  }
+
+  &--h4,
+  &--h5 {
+    font-weight: 500;
+  }
+
+  //------------------------------
+  // => Sizes
+  //------------------------------
+  &--size-xxs {
+    font-size: $f-size-xxs;
+  }
+
+  &--size-xs {
+    font-size: $f-size-xs;
+  }
+
+  &--size-s {
+    font-size: $f-size-s;
+  }
+
+  &--size-xxl {
+    font-size: $f-size-xxl;
+  }
+
+  &--size-l {
+    font-size: $f-size-l;
+  }
+
+  &--small,
+  &--size-small {
+    font-size: $f-size-s;
+  }
+
+  &--h1,
+  &--size-h1 {
+    font-size: $f-size-h1;
+  }
+
+  &--h2,
+  &--size-h2 {
+    font-size: $f-size-h2;
+  }
+
+  &--h3,
+  &--size-h3 {
+    font-size: $f-size-h3;
+  }
+
+  &--size-xxxl {
+    font-size: $f-size-xxxl;
+  }
+
+  &--h4,
+  &--size-xl {
+    font-size: $f-size-xl;
+  }
+
+  &--h5,
+  &--size-normal {
+    font-size: $f-size-normal;
+  }
+
+  //------------------------------
+  // => Line height
+  //------------------------------
+  &--lh-1-4 {
+    line-height: 1.42857em;
+  }
+
+  &--lh-1-5 {
+    line-height: 1.5em;
+  }
+
+  &--lh-1-6 {
+    line-height: 1.58em;
+  }
+
+  //------------------------------
+  // => Modifiers
+  //------------------------------
+  &--link {
+    color: $c-tuna;
+    text-decoration: none;
+    border-bottom: 1px solid inherit;
+    transition: color $t-normal;
+
+    &:focus-visible {
+      color: $c-black;
+    }
+
+    @include hover {
+      color: $c-black;
+    }
+  }
+
+  &--white {
+    color: $c-white;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: darken($c-white, 20);
+      }
+
+      @include hover {
+        color: darken($c-white, 20);
+      }
+    }
+  }
+
+  &--silver {
+    color: $c-silver-chalice;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: darken($c-silver-chalice, 20);
+      }
+
+      @include hover {
+        color: darken($c-silver-chalice, 20);
+      }
+    }
+  }
+
+  &--coral {
+    color: $c-coral-tree;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: darken($c-coral-tree, 20);
+      }
+
+      @include hover {
+        color: darken($c-coral-tree, 20);
+      }
+    }
+  }
+
+  &--danger {
+    color: $c-danger;
+  }
+
+  &--chico {
+    color: $c-au-chico;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: lighten($c-au-chico, 20);
+      }
+
+      @include hover {
+        color: lighten($c-au-chico, 20);
+      }
+    }
+  }
+
+  &--cerulean {
+    color: $c-deep-cerulean;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: lighten($c-deep-cerulean, 20);
+      }
+
+      @include hover {
+        color: lighten($c-deep-cerulean, 20);
+      }
+    }
+  }
+
+  &--ziggurat {
+    color: $c-ziggurat;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: lighten($c-ziggurat, 20);
+      }
+
+      @include hover {
+        color: lighten($c-ziggurat, 20);
+      }
+    }
+  }
+
+  &--grey {
+    color: $c-grey;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: lighten($c-grey, 20);
+      }
+
+      @include hover {
+        color: lighten($c-grey, 20);
+      }
+    }
+  }
+
+  &--green {
+    color: $c-green;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: lighten($c-green, 20);
+      }
+
+      @include hover {
+        color: lighten($c-green, 20);
+      }
+    }
+  }
+
+  &--red {
+    color: $c-red;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: lighten($c-red, 20);
+      }
+
+      @include hover {
+        color: lighten($c-red, 20);
+      }
+    }
+  }
+
+  &--silver-chalice {
+    color: $c-silver-chalice;
+  }
+
+  &--bright-chico {
+    color: $c-bright-chico;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--bold {
+    font-family: $f-sf-bold;
+  }
+
+  &--light {
+    font-family: $f-sf-light;
+  }
+
+  &--medium {
+    font-family: $f-sf-medium;
+  }
+
+  &--heavy {
+    font-family: $f-sf-heavy;
+  }
+
+  &--underline {
+    text-decoration: underline;
+  }
+
+  &--linethrough {
+    text-decoration: line-through;
+  }
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    color: $c-deep-cerulean;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: $c-deep-cerulean;
+      }
+
+      @include hover {
+        color: $c-deep-cerulean;
+      }
+    }
+  }
+
+  &--women {
+    color: $c-coral-tree;
+
+    &#{$root}--link {
+      &:focus-visible {
+        color: $c-coral-tree;
+      }
+
+      @include hover {
+        color: $c-coral-tree;
+      }
+    }
+  }
+}

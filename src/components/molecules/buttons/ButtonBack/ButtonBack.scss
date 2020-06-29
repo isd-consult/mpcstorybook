@@ -1,0 +1,8 @@
+@import '~styles/settings/variables';
+
+.button-back {
+  $root: &;
+
+  z-index: $z-low;
+  cursor: pointer;
+}

@@ -1,0 +1,103 @@
+@import '~styles/settings/variables';
+
+.checkbox {
+  $root: &;
+
+  position: relative;
+  cursor: pointer;
+
+  &__icon {
+    display: inline-block;
+    background: none;
+  }
+
+  &__label {
+    display: inline-block;
+  }
+
+  &__icon--round {
+    border: 1px solid $c-silver-chalice;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+
+  &__icon--rect {
+    border: 2px solid $c-tuna;
+    width: 18px;
+    height: 18px;
+  }
+
+  &--disabled {
+    opacity: 0.6;
+  }
+
+  &--active {
+    #{$root}__icon--round {
+      background: $c-silver-chalice;
+    }
+
+    &#{$root}--men {
+      #{$root}__icon--round {
+        background: $c-deep-cerulean;
+      }
+    }
+
+    &#{$root}--women {
+      #{$root}__icon--round {
+        background: $c-coral-tree;
+      }
+    }
+
+    #{$root}__icon--rect {
+      background: $c-white !important;
+    }
+
+    #{$root}__icon--rect::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 13px;
+      background: $c-tuna;
+      width: 2px;
+      height: 2px;
+      box-shadow:
+        0 0 0 $c-tuna,
+        2px 0 0 $c-tuna,
+        4px 0 0 $c-tuna,
+        4px -2px 0 $c-tuna,
+        4px -4px 0 $c-tuna,
+        4px -6px 0 $c-tuna,
+        4px -8px 0 $c-tuna;
+      transform: rotate(45deg);
+    }
+  }
+
+  //--------------
+  // modifier
+  //--------------
+
+  &--men {
+    #{$root}__icon--round {
+      border: 1px solid $c-deep-cerulean;
+    }
+
+    #{$root}__icon--rect {
+      border: 2px solid $c-deep-cerulean;
+    }
+  }
+
+  &--women {
+    #{$root}__icon--round {
+      border: 1px solid $c-coral-tree;
+    }
+
+    #{$root}__icon--rect {
+      border: 2px solid $c-coral-tree;
+    }
+
+    #{$root}__icon--active {
+      background: $c-coral-tree;
+    }
+  }
+}

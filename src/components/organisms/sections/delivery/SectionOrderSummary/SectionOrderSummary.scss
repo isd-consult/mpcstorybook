@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.section-order-summary {
+  $root: &;
+
+  position: relative;
+
+  &__summary {
+    background-color: $c-wildsand;
+    padding: 20px 20px;
+  }
+}

@@ -1,0 +1,45 @@
+@import '~styles/settings/variables';
+
+.button-filter {
+  $root: &;
+
+  position: relative;
+  height: 40px;
+  padding: 0 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: $bs-normal;
+  transition: background $t-normal;
+
+  &__input {
+    display: none;
+  }
+
+  &--checked {
+    background: $c-black;
+    cursor: default;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    &#{$root}--checked {
+      background: $c-deep-cerulean;
+    }
+  }
+
+  &--women {
+    &#{$root}--checked {
+      background: $c-au-chico;
+    }
+  }
+}

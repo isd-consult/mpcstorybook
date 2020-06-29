@@ -1,0 +1,29 @@
+@import '~styles/settings/variables';
+
+.filter-form {
+  $root: &;
+
+  position: relative;
+
+  &__top {
+    display: flex;
+    padding: 20px 20px 20px 30px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px 15px 40px;
+  }
+
+  &__count {
+    color: $c-silver-chalice;
+  }
+
+  &__divider {
+    border-color: lighen($c-black, 50);
+  }
+}

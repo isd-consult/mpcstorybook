@@ -1,0 +1,35 @@
+@import '~styles/settings/variables';
+
+.section-items-by-size {
+  $root: &;
+
+  position: relative;
+  background: $c-black;
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--small {
+    background: $c-black;
+  }
+
+  &--men {
+    background: $c-deep-cerulean;
+
+    &#{$root}--small {
+      background: $c-ziggurat;
+    }
+  }
+
+  &--women {
+    background: $c-au-chico;
+
+    &#{$root}--small {
+      background: $c-coral-tree;
+    }
+  }
+
+  &--rounded {
+    background: $c-wildsand;
+  }
+}

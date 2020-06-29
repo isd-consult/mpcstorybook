@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.closet {
+  $root: &;
+
+  position: relative;
+
+  &__chain {
+    border: 1px solid $c-borderline;
+    border-radius: 3px;
+  }
+}

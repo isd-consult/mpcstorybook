@@ -1,0 +1,48 @@
+@import '~styles/settings/variables';
+
+.section-order-cancel-submit {
+  $root: &;
+
+  position: relative;
+
+  &__table {
+    &-head {
+      height: 43px;
+      background-color: $c-wildsand;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-top: 10px;
+      color: $c-order-label;
+
+      &-product {
+        flex-basis: 85%;
+      }
+
+      &-qty {
+        flex-basis: 15%;
+      }
+    }
+
+    &-row {
+      display: flex;
+      padding: 10px;
+      align-items: center;
+
+      &-image {
+        flex-basis: 25%;
+        height: 80px;
+        object-fit: contain;
+      }
+
+      &-desc {
+        flex-basis: 60%;
+      }
+    }
+  }
+
+  &__additional-text {
+    width: 100%;
+    height: 80px !important;
+  }
+}

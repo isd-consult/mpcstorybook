@@ -1,0 +1,126 @@
+@import '../settings/variables';
+$mediaList: sm 'small', md 'medium', lg 'large', xl 'xlarge';
+
+// =======================================
+// Flex direction
+// =======================================
+.fd-row {
+  flex-direction: row;
+}
+
+.fd-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.fd-column-reverse {
+  flex-direction: column-reverse;
+}
+
+// =======================================
+// Justify content
+// =======================================
+.jc-flex-start {
+  justify-content: flex-start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-flex-end {
+  justify-content: flex-end;
+}
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-space-around {
+  justify-content: space-around;
+}
+
+// =======================================
+// Align items
+// =======================================
+.ai-flex-start {
+  align-items: flex-start;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-flex-end {
+  align-items: flex-end;
+}
+
+// =======================================
+// Reponsive
+// =======================================
+@each $mq in $mediaList {
+  $key: nth($mq, 1);
+  $value: nth($mq, 2);
+
+  @include media('>=#{$value}') {
+    // =======================================
+    // Flex direction
+    // =======================================
+    .fd-row-#{$key} {
+      flex-direction: row;
+    }
+
+    .fd-row-reverse-#{$key} {
+      flex-direction: row-reverse;
+    }
+
+    .fd-column-#{$key} {
+      flex-direction: column;
+    }
+
+    .fd-column-reserve-#{$key} {
+      flex-direction: column-reverse;
+    }
+
+    // =======================================
+    // Justify content
+    // =======================================
+    .jc-flex-start-#{$key} {
+      justify-content: flex-start;
+    }
+
+    .jc-center-#{$key} {
+      justify-content: center;
+    }
+
+    .jc-flex-end-#{$key} {
+      justify-content: flex-end;
+    }
+
+    .jc-space-between-#{$key} {
+      justify-content: space-between;
+    }
+
+    .jc-space-around-#{$key} {
+      justify-content: space-around;
+    }
+
+    // =======================================
+    // Align items
+    // =======================================
+    .ai-flex-start-#{$key} {
+      align-items: flex-start;
+    }
+
+    .ai-center-#{$key} {
+      align-items: center;
+    }
+
+    .ai-flex-end-#{$key} {
+      align-items: flex-end;
+    }
+  }
+}

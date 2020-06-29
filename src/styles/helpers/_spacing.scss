@@ -1,0 +1,157 @@
+@import '../settings/variables';
+// =======================================
+// Spacing system
+// (mt-10, mt-15-md, mt-30-lg)
+// =======================================
+$mediaList: sm 'small', md 'medium', lg 'large', xl 'xlarge';
+$spaceamounts: (
+  5,
+  10,
+  15,
+  20,
+  25,
+  30,
+  35,
+  40
+); // Adjust this to include the pixel amounts you need.
+
+// =======================================
+// Spacing
+// =======================================
+@each $space in $spaceamounts {
+  // Margin
+  .mt-#{$space} {
+    margin-top: #{$space}px !important;
+  }
+
+  .mr-#{$space} {
+    margin-right: #{$space}px !important;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: #{$space}px !important;
+  }
+
+  .ml-#{$space} {
+    margin-left: #{$space}px !important;
+  }
+
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .my-#{$space} {
+    margin-top: #{$space}px !important;
+    margin-bottom: #{$space}px !important;
+  }
+
+  .mx-#{$space} {
+    margin-right: #{$space}px !important;
+    margin-left: #{$space}px !important;
+  }
+
+  // Padding
+  .pt-#{$space} {
+    padding-top: #{$space}px !important;
+  }
+
+  .pr-#{$space} {
+    padding-right: #{$space}px !important;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: #{$space}px !important;
+  }
+
+  .pl-#{$space} {
+    padding-left: #{$space}px !important;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space}px !important;
+    padding-bottom: #{$space}px !important;
+  }
+
+  .px-#{$space} {
+    padding-right: #{$space}px !important;
+    padding-left: #{$space}px !important;
+  }
+}
+
+// =======================================
+// Reponsive
+// =======================================
+@each $mq in $mediaList {
+  $key: nth($mq, 1);
+  $value: nth($mq, 2);
+
+  @include media('>=#{$value}') {
+    @each $space in $spaceamounts {
+      // Margin
+      .mt-#{$space}-#{$key} {
+        margin-top: #{$space}px !important;
+      }
+
+      .mr-#{$space}-#{$key} {
+        margin-right: #{$space}px !important;
+      }
+
+      .mb-#{$space}-#{$key} {
+        margin-bottom: #{$space}px !important;
+      }
+
+      .ml-#{$space}-#{$key} {
+        margin-left: #{$space}px !important;
+      }
+
+      .m-#{$space}-#{$key} {
+        margin: #{$space}px !important;
+      }
+
+      .my-#{$space}-#{$key} {
+        margin-top: #{$space}px !important;
+        margin-bottom: #{$space}px !important;
+      }
+
+      .mx-#{$space}-#{$key} {
+        margin-right: #{$space}px !important;
+        margin-left: #{$space}px !important;
+      }
+
+      // Padding
+      .pt-#{$space}-#{$key} {
+        padding-top: #{$space}px !important;
+      }
+
+      .pr-#{$space}-#{$key} {
+        padding-right: #{$space}px !important;
+      }
+
+      .pb-#{$space}-#{$key} {
+        padding-bottom: #{$space}px !important;
+      }
+
+      .pl-#{$space}-#{$key} {
+        padding-left: #{$space}px !important;
+      }
+
+      .p-#{$space}-#{$key} {
+        padding: #{$space}px !important;
+      }
+
+      .py-#{$space}-#{$key} {
+        padding-top: #{$space}px !important;
+        padding-bottom: #{$space}px !important;
+      }
+
+      .px-#{$space}-#{$key} {
+        padding-right: #{$space}px !important;
+        padding-left: #{$space}px !important;
+      }
+    }
+  }
+}

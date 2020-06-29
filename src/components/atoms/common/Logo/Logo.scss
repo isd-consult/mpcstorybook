@@ -1,0 +1,65 @@
+@import '~styles/settings/variables';
+
+.logo {
+  $root: &;
+
+  position: relative;
+
+  &__image {
+    height: 20px;
+  }
+
+  &--xxs {
+    #{$root}__image {
+      height: 22px;
+    }
+  }
+
+  &--xs {
+    #{$root}__image {
+      height: 24px;
+    }
+  }
+
+  &--small {
+    #{$root}__image {
+      height: 26px;
+    }
+  }
+
+  &--normal {
+    #{$root}__image {
+      height: 28px;
+    }
+  }
+
+  &--large {
+    #{$root}__image {
+      height: 34px;
+    }
+  }
+
+  &--xl {
+    #{$root}__image {
+      height: 38px;
+    }
+  }
+
+  &--xxl {
+    #{$root}__image {
+      height: 42px;
+    }
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}

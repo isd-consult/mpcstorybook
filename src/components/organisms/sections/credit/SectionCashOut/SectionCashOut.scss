@@ -1,0 +1,11 @@
+@import '~styles/settings/variables';
+
+.section-cash-out {
+  $root: &;
+
+  position: relative;
+
+  &__desc {
+    color: $c-silver-chalice;
+  }
+}

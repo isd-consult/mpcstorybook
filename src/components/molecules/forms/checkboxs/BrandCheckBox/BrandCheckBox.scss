@@ -1,0 +1,24 @@
+@import '~styles/settings/variables';
+
+.brand-check-box {
+  $root: &;
+
+  position: relative;
+  max-width: 110px;
+  margin: auto;
+
+  &__image {
+    width: 100%;
+    height: 85px;
+    border-radius: 10px;
+  }
+
+  //--------------
+  // modifier
+  //--------------
+  &--active {
+    #{$root}__image {
+      border: 2px solid $c-black;
+    }
+  }
+}

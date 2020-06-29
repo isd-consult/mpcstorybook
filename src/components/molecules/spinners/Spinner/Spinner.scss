@@ -1,0 +1,141 @@
+@import '~styles/settings/variables';
+
+.spinner-logo {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &__group {
+    transform-origin: center center;
+    animation: rotate 1.5s ease-in-out infinite;
+  }
+
+  &__text {
+    transform-origin: center center;
+    animation: rotateX 0.75s ease-in-out infinite alternate;
+    fill: $c-white;
+  }
+
+  &__content {
+    transform-origin: center center;
+    animation: scaleRect 0.75s ease-in-out infinite alternate-reverse;
+  }
+
+  &--tiny {
+    width: 10px;
+    height: 10px;
+  }
+
+  &--large {
+    width: 60px;
+    height: 60px;
+  }
+
+  &--men {
+    .spinner-logo__dot {
+      fill: darken($c-deep-cerulean, 10);
+    }
+
+    .spinner-logo__ellipse {
+      fill: $c-deep-cerulean;
+    }
+  }
+
+  &--women {
+    .spinner-logo__dot {
+      fill: darken($c-au-chico, 10);
+    }
+
+    .spinner-logo__ellipse {
+      fill: $c-au-chico;
+    }
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateX {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes scaleRect {
+  to {
+    transform: scale(0.9);
+  }
+}
+
+.spinner {
+  $root: &;
+
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: $c-black;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  text-align: center;
+
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+
+  &--tiny {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+
+  &--small {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--normal {
+    width: 30px;
+    height: 30px;
+  }
+
+  &--big {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--large {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+  }
+
+  &--center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--men {
+    border-top-color: $c-deep-cerulean;
+  }
+
+  &--women {
+    border-top-color: $c-au-chico;
+  }
+}

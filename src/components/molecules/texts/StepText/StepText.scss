@@ -1,0 +1,25 @@
+@import '~styles/settings/variables';
+
+.step-text {
+  $root: &;
+
+  position: relative;
+
+  &__step {
+    float: left;
+  }
+
+  &__current {
+    float: left;
+  }
+
+  &__total {
+    margin-top: 8px;
+    margin-left: 3px;
+    float: left;
+  }
+
+  &--auto {
+    width: auto;
+  }
+}

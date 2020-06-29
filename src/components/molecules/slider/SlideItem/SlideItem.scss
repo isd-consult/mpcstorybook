@@ -1,0 +1,61 @@
+@import '~styles/settings/variables';
+
+.slide-item {
+  $root: &;
+
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 10px 0;
+  height: 358px;
+  width: 100%;
+  opacity: 0;
+  transition: all 2s;
+
+  &__title {
+    position: absolute;
+    right: 22px;
+    height: 21px;
+    text-align: right;
+    margin: 0;
+    padding: 4px 15px;
+    font-weight: bold;
+    color: $c-tuna;
+    background-color: $c-silver-chalice;
+  }
+
+  &__infoicon {
+    position: absolute;
+    right: 22px;
+    bottom: 12px;
+    width: 43px;
+    height: 43px;
+    background-color: $c_white;
+  }
+
+  //------------------------------
+  // => Modifiers
+  //------------------------------
+  &--active {
+    opacity: 1;
+    transition: all 2s;
+  }
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    #{$root}__title {
+      color: $c-deep-cerulean;
+      background-color: $c-ziggurat;
+    }
+  }
+
+  &--women {
+    #{$root}__title {
+      color: $c-au-chico;
+      background-color: $c-pot-pourri;
+    }
+  }
+}

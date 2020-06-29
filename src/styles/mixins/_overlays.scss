@@ -1,0 +1,17 @@
+@mixin darkOverlay () {
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($c-tuna, 0.09);
+  }
+}
+
+@mixin darkOverlayOpacity ($opacity: 0.09) {
+  &::before {
+    background: rgba($c-tuna, $opacity);
+  }
+}

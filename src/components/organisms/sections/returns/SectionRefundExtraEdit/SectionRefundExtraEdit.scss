@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.section-refund-extra-edit {
+  $root: &;
+
+  position: relative;
+
+  &__submitbtn {
+    width: calc(100% - 40px);
+    margin: 20px;
+  }
+}

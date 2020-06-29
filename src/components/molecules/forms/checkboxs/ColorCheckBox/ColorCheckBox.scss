@@ -1,0 +1,138 @@
+@import '~styles/settings/variables';
+
+.color-check-box {
+  $root: &;
+
+  position: relative;
+  cursor: pointer;
+
+  &__label {
+    display: inline-block;
+  }
+
+  &__icon {
+    display: inline-block;
+    border: 1px solid $c-silver-chalice;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+  }
+
+  &__icon--beige {
+    background-color: $c-beige;
+  }
+
+  &__icon--black {
+    background-color: $c-black;
+  }
+
+  &__icon--blue {
+    background-color: $c-blue;
+  }
+
+  &__icon--brown {
+    background-color: $c-brown;
+  }
+
+  &__icon--coral {
+    background-color: $c-coral;
+  }
+
+  &__icon--darkblue {
+    background-color: $c-darkblue;
+  }
+
+  &__icon--darkgreen {
+    background-color: $c-darkgreen;
+  }
+
+  &__icon--gold {
+    background-color: $c-gold;
+  }
+
+  &__icon--green {
+    background-color: $c-green;
+  }
+
+  &__icon--grey {
+    background-color: $c-grey;
+  }
+
+  &__icon--khakigreen {
+    background-color: $c-khakigreen;
+  }
+
+  &__icon--lime {
+    background-color: $c-lime;
+  }
+
+  &__icon--magenta {
+    background-color: $c-magenta;
+  }
+
+  &__icon--maroon {
+    background-color: $c-maroon;
+  }
+
+  &__icon--mint {
+    background-color: $c-mint;
+  }
+
+  &__icon--multi {
+    background-image: linear-gradient(to bottom left, red, orange, yellow, green, blue);
+  }
+
+  &__icon--navy {
+    background-color: $c-navy;
+  }
+
+  &__icon--orange {
+    background-color: $c-orange;
+  }
+
+  &__icon--palepink {
+    background-color: $c-palepink;
+  }
+
+  &__icon--peach {
+    background-color: $c-peach;
+  }
+
+  &__icon--pink {
+    background-color: $c-pink;
+  }
+
+  &__icon--purple {
+    background-color: $c-purple;
+  }
+
+  &__icon--red {
+    background-color: $c-red;
+  }
+
+  &__icon--silver {
+    background-color: $c-silver;
+  }
+
+  &__icon--tan {
+    background-color: $c-tan;
+  }
+
+  &__icon--teal {
+    background-color: $c-teal;
+  }
+
+  &__icon--white {
+    background-color: $c-white;
+  }
+
+  &__icon--yellow {
+    background-color: $c-yellow;
+  }
+
+  &--active {
+    #{$root}__icon {
+      border: 2px solid $c-black;
+    }
+  }
+}

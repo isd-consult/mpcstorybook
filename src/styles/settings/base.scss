@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $f-sf, Helvetica, Arial, sans-serif;
+  font-size: $f-size-xs;
+  background: $c-white;
+  color: $c-tuna;
+}
+
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline-color: rgba($c-black, 0.2);
+  outline-offset: -1px;
+  outline-style: dotted;
+  outline-width: 1px;
+}
+
+//------------------------------
+// => Typography
+//------------------------------
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $c-tuna;
+}
+
+b,
+strong {
+  font-family: $f-sf-bold;
+}

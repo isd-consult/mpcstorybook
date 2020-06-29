@@ -1,0 +1,18 @@
+@import '~styles/settings/variables';
+
+.section-sizes-selection {
+  $root: &;
+
+  position: relative;
+
+  &__multiselects {
+    border: 1px solid $c-borderline;
+    border-radius: 3px;
+  }
+
+  &__savebtn {
+    background-color: $c-wildsand;
+    color: $c-black;
+    width: 150px;
+  }
+}

@@ -1,0 +1,9 @@
+@import '~styles/settings/variables';
+
+.section-favorite-categoies {
+  $root: &;
+
+  position: relative;
+  padding: 15px 30px;
+  border: 1px solid $c-borderline;
+}

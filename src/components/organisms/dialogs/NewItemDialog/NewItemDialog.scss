@@ -1,0 +1,19 @@
+@import '~styles/settings/variables';
+
+.new-item-dialog {
+  $root: &;
+
+  position: relative;
+
+  &__dialog-product-name {
+    background-color: $c-black;
+
+    &--men {
+      background: $c-deep-cerulean;
+    }
+
+    &--women {
+      background: $c-au-chico;
+    }
+  }
+}

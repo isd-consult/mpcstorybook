@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.delivery-checkout {
+  $root: &;
+
+  position: relative;
+}

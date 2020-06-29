@@ -1,0 +1,138 @@
+@import '~styles/settings/variables';
+
+.slider-core {
+  $root: &;
+
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+
+  &__item {
+    min-height: 100px;
+
+    img {
+      width: 350px;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+
+  // =======================================
+  // Update slick styles
+  // =======================================
+  .slick-slide {
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick-dots {
+    bottom: 0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    pointer-events: none;
+
+    li {
+      pointer-events: all;
+
+      &.slick-active {
+        button {
+          background: lighten($c-black, 75);
+
+          &::before {
+            background: lighten($c-black, 10);
+            transform: scale(1);
+          }
+        }
+      }
+
+      button {
+        background: transparent;
+        border-radius: 50%;
+        transition: background $t-normal;
+
+        &::before {
+          transform: scale(0.8);
+          content: '';
+          font-family: none;
+          width: 14px;
+          height: 14px;
+          background: lighten($c-black, 75);
+          border-radius: 50%;
+          top: 3px;
+          left: 3px;
+          opacity: 1;
+          transition: transform $t-normal;
+        }
+      }
+    }
+  }
+
+  // =======================================
+  // Theme
+  // =======================================
+  &--secondary {
+    .slick-dots {
+      li {
+        &.slick-active {
+          button {
+            background: rgba($c-white, 0.25);
+
+            &::before {
+              background: $c-white;
+            }
+          }
+        }
+
+        button {
+          &::before {
+            background: rgba($c-white, 0.25);
+          }
+        }
+      }
+    }
+  }
+
+  &--men {
+    .slick-dots {
+      li {
+        &.slick-active {
+          button {
+            background: rgba($c-deep-cerulean, 0.25);
+
+            &::before {
+              background: $c-deep-cerulean;
+            }
+          }
+        }
+
+        button {
+          &::before {
+            background: rgba($c-deep-cerulean, 0.25);
+          }
+        }
+      }
+    }
+  }
+
+  &--women {
+    .slick-dots {
+      li {
+        &.slick-active {
+          button {
+            background: rgba($c-au-chico, 0.25);
+
+            &::before {
+              background: $c-au-chico;
+            }
+          }
+        }
+
+        button {
+          &::before {
+            background: rgba($c-au-chico, 0.25);
+          }
+        }
+      }
+    }
+  }
+}

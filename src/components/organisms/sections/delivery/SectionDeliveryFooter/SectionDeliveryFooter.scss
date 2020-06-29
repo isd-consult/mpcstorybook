@@ -1,0 +1,27 @@
+@import '~styles/settings/variables';
+
+.section-delivery-footer {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  background-color: $c-black;
+  color: $c-white;
+  align-items: center;
+  height: 40px;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  &__logo {
+    color: $c-white;
+  }
+
+  &__link {
+    font-size: $f-size-xs;
+    font-weight: 300;
+    letter-spacing: 0.14px;
+    line-height: 27px;
+    color: $c-white;
+    margin-left: 20px;
+  }
+}

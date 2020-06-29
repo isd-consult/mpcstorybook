@@ -1,0 +1,96 @@
+@import '~styles/settings/variables';
+
+.searchbar {
+  $root: &;
+
+  position: relative;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input {
+    border: 0;
+    box-shadow: none;
+    border-top: 1px solid $c-borderline;
+    border-bottom: 1px solid $c-borderline;
+    padding: 0 45px;
+    height: 60px;
+    width: 100%;
+    -webkit-appearance: none !important;
+    font-size: $f-size-xl;
+    border-radius: 0 !important;
+    background: transparent;
+
+    &:focus ~ .searchbar__icon {
+      fill: $c-bright-chico;
+    }
+
+    &::-ms-reveal,
+    &::-ms-clear {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    pointer-events: none;
+    top: 20px;
+    left: 15px;
+    bottom: 2px;
+    transition: fill $t-normal;
+  }
+
+  &__button-close {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 100%;
+  }
+
+  &__autocomplete {
+    display: block !important;
+  }
+
+  &__menu {
+    background: $c-white;
+    width: 100%;
+    box-shadow: $bs-normal;
+
+    &-item {
+      display: block;
+      padding: 15px;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($c-white, 1%);
+      }
+    }
+  }
+
+  &--autocomplete {
+    #{$root}__input {
+      padding: 0 45px 0 15px;
+      border-top: none;
+      transition: border-color $t-normal;
+
+      &:focus {
+        border-color: $c-black;
+      }
+    }
+
+    #{$root}__icon {
+      left: auto;
+      right: 15px;
+    }
+  }
+}

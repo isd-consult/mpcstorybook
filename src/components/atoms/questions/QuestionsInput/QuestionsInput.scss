@@ -1,0 +1,31 @@
+@import '~styles/settings/variables';
+
+.questions-input {
+  $root: &;
+
+  position: relative;
+
+  &__input {
+    background: $c-white !important;
+    box-shadow: none;
+    -webkit-appearance: none;
+    border: 1px solid lighten($c-q-black, 50);
+    font-size: $f-size-xl;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  &__error {
+    background: $c-danger;
+    padding: 10px 5px 5px;
+    margin-top: -5px;
+    border-radius: 0 0 5px 5px;
+  }
+
+  &--error {
+    #{$root}__input {
+      border-color: $c-danger;
+    }
+  }
+}

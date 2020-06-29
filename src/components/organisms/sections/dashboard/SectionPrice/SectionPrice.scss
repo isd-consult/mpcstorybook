@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.section-price {
+  $root: &;
+
+  position: relative;
+}

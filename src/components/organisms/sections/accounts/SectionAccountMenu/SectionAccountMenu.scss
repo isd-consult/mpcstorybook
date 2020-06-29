@@ -1,0 +1,30 @@
+@import '~styles/settings/variables';
+
+.section-account-menu {
+  $root: &;
+
+  position: relative;
+
+  &__profile-percent {
+    background-color: $c-roman;
+    color: $c-white;
+    letter-spacing: 1px;
+    z-index: $z-mid;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    border-bottom: 1px solid $c-silver;
+  }
+
+  &__logoutbtn {
+    background-color: $c-wildsand;
+    color: $c-black;
+    width: 150px;
+  }
+}

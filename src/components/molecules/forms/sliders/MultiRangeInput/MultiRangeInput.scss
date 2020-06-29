@@ -1,0 +1,45 @@
+@import '~styles/settings/variables';
+
+.multi-range-input {
+  $root: &;
+
+  position: relative;
+
+  &__slider {
+    padding: 10px 0;
+  }
+
+  &__slider-item {
+    pointer-events: none;
+    position: absolute;
+    -webkit-appearance: none;
+    background: $c-black;
+    height: 3px;
+    width: 100%;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      pointer-events: all;
+      position: relative;
+      z-index: 1;
+      outline: 0;
+      -webkit-appearance: none;
+      width: 5px;
+      height: 20px;
+      border-radius: 3px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      pointer-events: all;
+      position: relative;
+      appearance: none;
+      width: 5px;
+      height: 20px;
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}

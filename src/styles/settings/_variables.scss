@@ -1,0 +1,135 @@
+//------------------------------
+// => Mixins
+//------------------------------
+@import '../mixins/media';
+@import '../mixins/hover';
+@import '../mixins/queries';
+@import '../mixins/overlays';
+
+//------------------------------
+// => Colors
+//------------------------------
+$c-white: #ffffff;
+$c-coral: #ff7f50;
+$c-beige: #f5f5dc;
+$c-black: #000000;
+$c-blue: #0000ff;
+$c-brown: #8b4513;
+$c-darkblue: #00008b;
+$c-darkgreen: #006400;
+$c-gold: #daa520;
+$c-green: #008000;
+$c-grey: #a9a9a9;
+$c-khakigreen: #bdb76b;
+$c-magenta: #ff00ff;
+$c-maroon: #800000;
+$c-mint: #f5fffa;
+$c-lime: #00ff00;
+$c-navy: #000080;
+$c-orange: #ff5733;
+$c-palepink: #ffb6c1;
+$c-peach: #ffdab9;
+$c-pink: #ff69b4;
+$c-purple: #800080;
+$c-red: #ff0000;
+$c-silver: #c0c0c0;
+$c-tan: #d2b48c;
+$c-teal: #008080;
+$c-yellow: #ffff00;
+$c-light-sky: #7bbed9;
+$c-heavy-yellow: #f8cb17;
+
+$c-au-chico: #8b5d5d;
+$c-coral-tree: #aa7070;
+$c-bright-chico: #e25e5e;
+$c-silver-chalice: #9d9d9d;
+$c-quicksand: #c09191;
+$c-tuna: #32313b;
+$c-wildsand: #f4f4f4;
+$c-sand: #f6f6f6;
+$c-borderline: #e5e5e5;
+$c-pot-pourri: #f5e0da;
+$c-tumbleweed: #e0a08e;
+$c-order-label: #7f7f7f;
+
+$c-deep-cerulean: #02839d;
+$c-light-cerulean: #90c0c9;
+$c-ziggurat: #bad3e2;
+$c-black-squeeze: #e7f1f7;
+$c-roman: #e15e5e;
+$c-grey: #00000088;
+
+$c-facebook:#3c5899;
+$c-twitter:#00acee;
+
+$c-danger: #ff4444;
+$c-warn: #ffbb33;
+$c-success: #0ead69;
+$c-info: #0099cc;
+
+$c-overlay: rgba(0, 0, 0, 0.3);
+
+//------------------------------
+// => Question colors
+//------------------------------
+$c-q-yellow: #f8cb17;
+$c-q-black: #363636;
+$c-q-1: #7bbed9;
+$c-q-2: #f26522;
+$c-q-3: #489f71;
+$c-q-4: #f984b9;
+$c-q-5: #10c9cb;
+$c-q-6: #9b76d6;
+//------------------------------
+// => Font sizes
+//------------------------------
+$f-size-h1: 34px;
+$f-size-h2: 28px;
+$f-size-h3: 25px;
+$f-size-xxxl: 20px;
+$f-size-xxl: 18px;
+$f-size-xl: 16px;
+$f-size-l: 15px;
+$f-size-normal: 14px;
+$f-size-s: 13px;
+$f-size-xs: 12px;
+$f-size-xxs: 10px;
+
+//------------------------------
+// => Fonts
+//------------------------------
+$f-anglecia: 'Anglecia';
+$f-anglecia-italic: 'Anglecia-italic';
+$f-anglecia-pro: 'Anglecia Pro Display';
+
+$f-sf: 'SF';
+$f-sf-bold: 'SF-bold';
+$f-sf-black: 'SF-black';
+$f-sf-heavy: 'SF-heavy';
+$f-sf-semibold: 'SF-semibold';
+$f-sf-light: 'SF-light';
+$f-sf-medium: 'SF-medium';
+$f-sf-thin: 'SF-thin';
+$f-sf-ultrathin: 'SF-ultrathin';
+$f-sf-pro: 'SF Pro Display';
+$f-se-ui: 'Segoe UI';
+//------------------------------
+// => Animations
+//------------------------------
+$t-normal: 0.35s;
+$t-medium: 0.5s;
+$t-long: 0.75s ease-in-out;
+
+//------------------------------
+// => Shadows
+//------------------------------
+$bs-light: 0 3px 6px 0 rgba(0, 0, 0, 0.14);
+$bs-normal: 0 6px 12px 0 rgba(0, 0, 0, 0.09);
+$bs-heavy: 0 6px 12px rgba(147, 147, 147, 0.29);
+
+//------------------------------
+// => zIndex
+//------------------------------
+$z-low: 10;
+$z-mid: 100;
+$z-high: 1000;

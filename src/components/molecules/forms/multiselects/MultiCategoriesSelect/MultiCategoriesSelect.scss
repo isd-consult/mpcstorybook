@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.multi-categories-select {
+  $root: &;
+
+  position: relative;
+}

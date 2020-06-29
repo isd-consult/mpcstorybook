@@ -1,0 +1,206 @@
+@import '~styles/settings/variables';
+
+.range-slider {
+  $root: &;
+
+  position: relative;
+
+  &__body {
+    margin: 10px 10px 40px 10px;
+  }
+
+  &--secondary {
+    .noUi-connect {
+      background: $c-tuna;
+    }
+
+    .noUi-target {
+      box-shadow: none;
+      border: none;
+      background: $c-borderline;
+      border-radius: 0;
+    }
+
+    .noUi-marker {
+      left: -10px;
+      background-color: $c-borderline;
+      border-radius: 2px;
+    }
+
+    .noUi-value {
+      color: $c-tuna;
+      font-size: $f-size-xs;
+      padding: 5px;
+      top: 0;
+      transition: $t-normal;
+      max-width: 90px;
+    }
+
+    .noUi-value.active {
+      font-weight: bold;
+    }
+
+    .noUi-handle {
+      box-shadow: none;
+      border-radius: 50%;
+      border: 2px solid $c-tuna;
+      background-color: $c-white;
+      width: 18px;
+      height: 18px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    .noUi-vertical {
+      &.noUi-target {
+        height: auto;
+        width: 4px;
+      }
+
+      .noUi-marker {
+        left: -10px;
+        height: 4px;
+      }
+
+      .noUi-handle {
+        right: -7px;
+        top: -9px;
+      }
+    }
+
+    .noUi-horizontal {
+      &.noUi-target {
+        width: auto;
+        height: 4px;
+      }
+
+      .noUi-marker {
+        top: -10px;
+        width: 4px;
+      }
+
+      .noUi-handle {
+        right: -10px;
+        top: -8px;
+      }
+    }
+  }
+
+  &--tertiary {
+    .noUi-marker {
+      display: none;
+    }
+
+    .noUi-value {
+      color: $c-q-black;
+      font-size: $f-size-l;
+      padding: 5px;
+      top: 0;
+      font-family: $f-sf-heavy;
+      transition: $t-normal;
+      max-width: 90px;
+
+      .noUi-vertical & {
+        left: 15px;
+      }
+    }
+
+    .noUi-value.active {
+      color: $c-white;
+    }
+
+    .noUi-value-horizontal {
+      transform: translate(-50%);
+      top: 15px;
+      white-space: normal;
+    }
+
+    /* NoUiUpdate */
+    .noUi-connect {
+      background: $c-white;
+    }
+
+    .noUi-target {
+      box-shadow: none;
+      border: none;
+      background: $c-q-black;
+      margin-top: 14px;
+      margin-bottom: 14px;
+      margin-left: 14px;
+      margin-right: 14px;
+    }
+
+    .noUi-vertical {
+      &.noUi-target {
+        height: auto;
+        width: 5px;
+      }
+
+      .noUi-handle {
+        top: -5px;
+        right: -11px;
+
+        .noUi-touch-area::after {
+          height: 8px;
+          width: 100%;
+        }
+      }
+    }
+
+    .noUi-horizontal {
+      &.noUi-target {
+        height: 5px;
+      }
+
+      .noUi-handle {
+        top: -10px;
+        right: -12px;
+
+        .noUi-touch-area::after {
+          height: 100%;
+          width: 8px;
+        }
+      }
+    }
+
+    .noUi-handle::after,
+    .noUi-handle::before {
+      display: none;
+    }
+
+    .noUi-handle {
+      box-shadow: none;
+      border-radius: 0%;
+      border: none;
+      background: none;
+      width: 28px;
+
+      .noUi-touch-area {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          background: $c-white;
+          border-radius: 5px;
+          backface-visibility: hidden;
+        }
+      }
+    }
+
+    html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+      right: -17px;
+    }
+
+    .noUi-connects {
+      border-radius: 0;
+    }
+  }
+}

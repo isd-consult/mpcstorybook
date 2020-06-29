@@ -1,0 +1,13 @@
+@import '~styles/settings/variables';
+
+.section-product-info {
+  $root: &;
+
+  position: relative;
+  // &__deliveryicon {
+  //   float: left;
+  // }
+  // &__deliverydesc {
+  //   float: left;
+  // }
+}

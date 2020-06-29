@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.accountaddress {
+  $root: &;
+
+  position: relative;
+}

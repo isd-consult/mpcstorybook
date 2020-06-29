@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.section-cart-header {
+  $root: &;
+
+  position: relative;
+}

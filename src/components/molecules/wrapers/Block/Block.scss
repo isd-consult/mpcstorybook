@@ -1,0 +1,17 @@
+@import '~styles/settings/variables';
+
+.block {
+  $root: &;
+
+  position: relative;
+  border: solid 1px $c-borderline;
+  border-radius: 3px;
+
+  &--men {
+    border: solid 1px $c-deep-cerulean;
+  }
+
+  &--women {
+    border: solid 1px $c-coral-tree;
+  }
+}

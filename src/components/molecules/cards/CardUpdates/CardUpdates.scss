@@ -1,0 +1,18 @@
+@import '~styles/settings/variables';
+
+.card-updates {
+  $root: &;
+
+  position: relative;
+  padding: 20px;
+  background: $c-white;
+  box-shadow: $bs-normal;
+  padding-right: 60px;
+  z-index: $z-mid;
+
+  &__button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

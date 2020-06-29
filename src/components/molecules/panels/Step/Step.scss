@@ -1,0 +1,12 @@
+@import '~styles/settings/variables';
+
+.step {
+  $root: &;
+
+  position: relative;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}

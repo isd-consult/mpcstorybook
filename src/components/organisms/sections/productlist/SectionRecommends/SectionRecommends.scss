@@ -1,0 +1,30 @@
+@import '~styles/settings/variables';
+
+.section-recommends {
+  $root: &;
+
+  position: relative;
+  background: $c-black;
+
+  &__dialog-product-name {
+    background-color: $c-black;
+
+    &--men {
+      background: $c-deep-cerulean;
+    }
+
+    &--women {
+      background: $c-au-chico;
+    }
+  }
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    background: $c-deep-cerulean;
+  }
+
+  &--women {
+    background: $c-au-chico;
+  }
+}

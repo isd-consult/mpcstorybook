@@ -1,0 +1,53 @@
+@import '~styles/settings/variables';
+
+.radiobox {
+  $root: &;
+
+  position: relative;
+  cursor: pointer;
+
+  &__icon {
+    border: 1px solid $c-black;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 8px #fff;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+  }
+
+  &__label-form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    display: inline-block;
+  }
+
+  //--------------
+  // modifier
+  //--------------
+  &--active {
+    #{$root}__icon {
+      background: $c-black;
+      box-shadow: inset 0 0 0 2px $c-white;
+      transition: box-shadow 0.3s;
+    }
+  }
+
+  &--disabled {
+    #{$root}__icon {
+      border: 1px solid $c-grey;
+    }
+
+    #{$root}__label {
+      color: $c-grey;
+    }
+
+    &#{$root}--active {
+      #{$root}__icon {
+        background: $c-grey;
+      }
+    }
+  }
+}

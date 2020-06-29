@@ -1,0 +1,13 @@
+@import '~styles/settings/variables';
+
+.section-account-title {
+  $root: &;
+
+  position: relative;
+
+  &__desc {
+    color: $c-silver-chalice;
+    font-weight: 300;
+    line-height: 2;
+  }
+}

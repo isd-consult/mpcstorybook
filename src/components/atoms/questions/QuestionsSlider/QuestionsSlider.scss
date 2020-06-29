@@ -1,0 +1,121 @@
+@import '~styles/settings/variables';
+
+.questions-slider {
+  $root: &;
+
+  position: relative;
+  padding: 0 15px 30px;
+
+  .noUi-marker {
+    display: none;
+  }
+
+  .noUi-value {
+    color: $c-q-black;
+    font-size: $f-size-l;
+    padding: 5px;
+    top: 0;
+    font-family: $f-sf-heavy;
+    transition: $t-normal;
+    max-width: 90px;
+
+    .noUi-vertical & {
+      left: 15px;
+    }
+  }
+
+  .noUi-value.active {
+    color: $c-white;
+  }
+
+  .noUi-value-horizontal {
+    transform: translate(-50%);
+    top: 15px;
+    white-space: normal;
+  }
+
+  /* NoUiUpdate */
+  .noUi-connect {
+    background: $c-white;
+  }
+
+  .noUi-target {
+    box-shadow: none;
+    border: none;
+    background: $c-q-black;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .noUi-vertical {
+    &.noUi-target {
+      height: auto;
+      width: 5px;
+    }
+
+    .noUi-handle {
+      top: -5px;
+      right: -11px;
+
+      .noUi-touch-area::after {
+        height: 8px;
+        width: 100%;
+      }
+    }
+  }
+
+  .noUi-horizontal {
+    &.noUi-target {
+      height: 5px;
+    }
+
+    .noUi-handle {
+      top: -10px;
+      right: -12px;
+
+      .noUi-touch-area::after {
+        height: 100%;
+        width: 8px;
+      }
+    }
+  }
+
+  .noUi-handle::after,
+  .noUi-handle::before {
+    display: none;
+  }
+
+  .noUi-handle {
+    box-shadow: none;
+    border-radius: 0%;
+    border: none;
+    background: none;
+    width: 28px;
+
+    .noUi-touch-area {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: $c-white;
+        border-radius: 5px;
+        backface-visibility: hidden;
+      }
+    }
+  }
+
+  html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
+    right: -17px;
+  }
+
+  .noUi-connects {
+    border-radius: 0;
+  }
+}

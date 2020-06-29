@@ -1,0 +1,18 @@
+@import '~styles/settings/variables';
+
+.text-area {
+  $root: &;
+
+  position: relative;
+  border: 1px solid $c-borderline;
+  border-radius: 5px;
+  height: 120px;
+  padding: 10px 5px;
+  font-size: $f-size-s;
+  color: $c-tuna;
+  margin-top: 5px;
+
+  &--block {
+    width: 100%;
+  }
+}

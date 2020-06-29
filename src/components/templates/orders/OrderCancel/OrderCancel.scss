@@ -1,0 +1,7 @@
+@import '~styles/settings/variables';
+
+.order-cancel {
+  $root: &;
+
+  position: relative;
+}

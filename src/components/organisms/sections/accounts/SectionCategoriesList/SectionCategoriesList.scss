@@ -1,0 +1,21 @@
+@import '~styles/settings/variables';
+
+.section-categories-list {
+  $root: &;
+
+  position: relative;
+
+  &__list {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+
+  &__plusbtn {
+    background: transparent;
+  }
+
+  &__empty {
+    height: 20px;
+  }
+}

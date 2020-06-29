@@ -1,0 +1,77 @@
+@import '~styles/settings/variables';
+
+.snackbar {
+  $root: &;
+
+  padding: 25px 50px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: $c-wildsand;
+  visibility: hidden;
+  z-index: $z-high;
+  display: flex;
+
+  &__icon {
+    fill: $c-white;
+  }
+
+  &--show {
+    visibility: visible !important;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 5.5s;
+    animation: fadein 0.5s, fadeout 0.5s 5.5s;
+  }
+
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {
+      bottom: -65px;
+    }
+
+    to {
+      bottom: 0;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      bottom: -65px;
+    }
+
+    to {
+      bottom: 0;
+    }
+  }
+
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 0;
+    }
+
+    to {
+      bottom: -65px;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      bottom: 0;
+    }
+
+    to {
+      bottom: -65px;
+    }
+  }
+
+  &--success {
+    background: #8ed956;
+  }
+
+  &--warning {
+    background: $c-yellow;
+  }
+
+  &--error {
+    background: $c-red;
+  }
+}

@@ -1,0 +1,13 @@
+@import '~styles/settings/variables';
+
+.input {
+  $root: &;
+
+  position: relative;
+  border: 1px solid $c-borderline;
+  border-radius: 5px;
+  height: 45px;
+  padding: 0 10px;
+  font-size: $f-size-s;
+  color: $c-tuna;
+}

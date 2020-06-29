@@ -1,0 +1,30 @@
+@import '~styles/settings/variables';
+
+.section-sort-filter {
+  $root: &;
+
+  position: relative;
+  background-color: $c-wildsand;
+  z-index: $z-mid;
+
+  &__sortbymenu {
+    position: absolute !important;
+    z-index: 10;
+    width: 100%;
+
+    &--show {
+      display: block;
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__removefilter {
+    border-radius: 30px;
+    background-color: $c-wildsand;
+    color: $c-black;
+    width: 140px;
+  }
+}

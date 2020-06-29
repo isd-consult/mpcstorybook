@@ -1,0 +1,9 @@
+@import '~styles/settings/variables';
+
+.l-main {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  min-height: calc(100vh - 244px);
+  background: white;
+}

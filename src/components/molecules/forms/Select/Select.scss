@@ -1,0 +1,91 @@
+@import '~styles/settings/variables';
+
+.select {
+  $root: &;
+
+  position: relative;
+  cursor: pointer;
+
+  &__label {
+    border: 1px solid $c-borderline;
+    border-radius: 3px;
+    background: $c-white;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+  }
+
+  &__dropmenu {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    margin: 0;
+    background-color: $c-white;
+    list-style-type: none;
+    border: 1px solid $c-borderline;
+    padding: 0;
+    max-height: 200px;
+    overflow: auto;
+  }
+
+  &__item:hover {
+    background: $c-wildsand;
+  }
+
+  //------------------------------
+  // => MODIFIERS
+  //------------------------------
+  &--disabled {
+    #{$root}__label {
+      background-color: $c-wildsand;
+    }
+  }
+
+  &--show {
+    #{$root}__dropmenu {
+      display: block;
+    }
+  }
+
+  &--hide {
+    #{$root}__dropmenu {
+      display: none;
+    }
+  }
+
+  &--error {
+    border: 1px solid $c-roman;
+  }
+
+  &--shadow {
+    #{$root}__label {
+      border: none;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+  //------------------------------
+  // => THEME
+  //------------------------------
+  &--men {
+    #{$root}__icon {
+      fill: $c-deep-cerulean;
+    }
+
+    #{$root}__item:hover {
+      background: $c-ziggurat;
+    }
+  }
+
+  &--women {
+    #{$root}__icon {
+      fill: $c-coral-tree;
+    }
+
+    #{$root}__item:hover {
+      background: $c-pot-pourri;
+    }
+  }
+}

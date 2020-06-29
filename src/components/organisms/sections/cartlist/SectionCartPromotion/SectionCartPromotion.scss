@@ -1,0 +1,18 @@
+@import '~styles/settings/variables';
+
+.section-cart-promotion {
+  $root: &;
+
+  position: relative;
+  background-color: $c-roman;
+  letter-spacing: 1px;
+  z-index: $z-mid !important;
+
+  &--availablefbucks {
+    background-color: $c-deep-cerulean !important;
+  }
+
+  &--earnedfbucks {
+    background-color: $c-roman !important;
+  }
+}

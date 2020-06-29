@@ -1,0 +1,145 @@
+# MPC Storybook Pipelines
+#
+
+# Define the depth of clones
+# @see https://git-scm.com/docs/git-clone#git-clone---depthltdepthgt
+# @see https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html#Configurebitbucket-pipelines.yml-ci_clone
+clone:
+  depth: 1    # include the last five commits
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          name: Build Storybook
+          image: node:8.12
+          caches:
+            - rsnode
+          script:
+            - npm config set python python2.7
+            - yarn
+            - rm src/config.js
+            - cp deploy/config-dev.js src/config.js
+            - npm rebuild node-sass
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy Storybook
+          image: governmentpaas/awscli
+          deployment: Storybook DEV
+          script:
+            - export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+            - aws s3 rm s3://${MPC_STORYBOOK_BUCKET}/ --recursive
+            - aws s3 sync build/ s3://${MPC_STORYBOOK_BUCKET}
+
+    stage:
+      - step:
+          name: Build Storybook
+          image: node:8.12
+          caches:
+            - rsnode
+          script:
+            - npm config set python python2.7
+            - yarn
+            - rm src/config.js
+            - cp deploy/config-stage.js src/config.js
+            - npm rebuild node-sass
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy Storybook
+          image: governmentpaas/awscli
+          deployment: Storybook STAGE
+          script:
+            - export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+            - aws s3 rm s3://${MPC_STORYBOOK_BUCKET}/ --recursive
+            - aws s3 sync build/ s3://${MPC_STORYBOOK_BUCKET}
+
+    master:
+      - step:
+          name: Build Storybook
+          image: node:8.12
+          caches:
+            - rsnode
+          script:
+            - npm config set python python2.7
+            - yarn
+            - rm src/config.js
+            - cp deploy/config-prod.js src/config.js
+            - npm rebuild node-sass
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy Storybook
+          image: governmentpaas/awscli
+          deployment: Storybook Production
+          script:
+            - export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+            - aws s3 rm s3://${MPC_STORYBOOK_BUCKET}/ --recursive
+            - aws s3 sync build/ s3://${MPC_STORYBOOK_BUCKET}
+
+
+    igor-dev:
+      - step:
+          name: Build Storybook
+          image: node:8.12
+          caches:
+            - rsnode
+          script:
+            - npm config set python python2.7
+            - yarn
+            - rm src/config.js
+            - cp deploy/config-igor.js src/config.js
+            - npm rebuild node-sass
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy Storybook
+          image: governmentpaas/awscli
+          deployment: Storybook DEV
+          script:
+            - export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+            - aws s3 rm s3://storybook-igor.mpc.runway.co.za/ --recursive
+            - aws s3 sync build/ s3://storybook-igor.mpc.runway.co.za
+
+#    'qa':
+#      - step:
+#          name: Build Storybook
+#          image: node:alpine
+#          caches:
+#            - rsnode
+#          script:
+#            - yarn
+#            - yarn build-storybook -c .storybook -o .out
+#          artifacts:
+#            - .out/**
+#            - .storybook/**
+#      - step:
+#          name: Push to S3 Bucket
+#          image: governmentpaas/awscli
+#          script:
+#            - export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+#            - export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+#            - aws s3 rm s3://${MPC_STORYBOOK_BUCKET}/qa
+#            - aws s3 cp .out s3://${MPC_STORYBOOK_BUCKET}/qa --recursive
+  default:
+    - step:
+        name: Validate JS with eslint
+        image: node:8.12
+        caches:
+          - rsnode
+        script:
+          - yarn
+          - npx eslint ./src
+
+definitions:
+  caches:
+    rsnode: node_modules

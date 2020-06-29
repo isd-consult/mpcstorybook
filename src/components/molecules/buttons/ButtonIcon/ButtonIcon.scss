@@ -1,0 +1,122 @@
+@import '~styles/settings/variables';
+
+.button-icon {
+  $root: &;
+
+  position: relative;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($c-silver-chalice, 0.08);
+  border-radius: 50%;
+  transition: background $t-normal;
+
+  &__badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -5px;
+    right: -5px;
+    height: 15px;
+    width: 15px;
+    background: $c-black;
+    border-radius: 50%;
+    transition: background $t-normal;
+  }
+
+  &__icon {
+    transition: fill $t-normal;
+  }
+
+  // @include hover {
+  //   background: lighten($c-black, 30);
+
+  //   #{$root}__icon {
+  //     fill: $c-white !important;
+  //   }
+  // }
+
+  &--reversed {
+    background: $c-white;
+
+    #{$root}__icon {
+      fill: $c-black;
+    }
+  }
+
+  &--active {
+    background: lighten($c-black, 30);
+
+    #{$root}__icon {
+      fill: $c-white;
+    }
+  }
+
+  &--auto-fit {
+    width: auto;
+    height: auto;
+    padding: 7px;
+  }
+
+  &--no-bg {
+    background: transparent;
+  }
+
+  &--disabled {
+    pointer-events: none;
+
+    #{$root}__icon {
+      fill: $c-borderline;
+    }
+  }
+
+  //------------------------------
+  // => Theme
+  //------------------------------
+  &--men {
+    #{$root}__badge {
+      background: $c-deep-cerulean;
+    }
+
+    &:focus-visible,
+    &#{$root}--active {
+      background: $c-ziggurat;
+    }
+
+    &#{$root}--reversed {
+      #{$root}__icon {
+        fill: $c-deep-cerulean;
+      }
+    }
+
+    @include hover {
+      background: $c-ziggurat;
+    }
+  }
+
+  &--women {
+    #{$root}__badge {
+      background: $c-quicksand;
+    }
+
+    &:focus-visible,
+    &#{$root}--active {
+      background: $c-coral-tree;
+    }
+
+    &#{$root}--reversed {
+      #{$root}__icon {
+        fill: $c-au-chico;
+      }
+    }
+
+    @include hover {
+      background: $c-coral-tree;
+    }
+  }
+}
